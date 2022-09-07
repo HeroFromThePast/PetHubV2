@@ -5,6 +5,7 @@ using UnityEngine;
 public class Timer : MonoBehaviour
 {
     public int minutes, seconds;
+    [SerializeField] bool loop;
     [SerializeField] Eventos inicioTimer;
     [SerializeField] Eventos[] evento;
     [SerializeField]int m, s;
@@ -40,6 +41,11 @@ public class Timer : MonoBehaviour
                     evento[i].FireEvent(); //disparar eventos
                 }
                 RestartTime();
+                if (loop == false)
+                {
+                    StopTimer();
+                    return;
+                }
             }
             else
             {
@@ -47,6 +53,7 @@ public class Timer : MonoBehaviour
                 s = 59;
             }
         }
+        
         Invoke("UpdateTimer", 1f);
     }
     void RestartTime()
