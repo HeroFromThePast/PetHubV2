@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 public class DragObjects : MonoBehaviour
 {
     private bool estaDentro = false;
+    public bool estaArrast = false;
     private Vector3 mOffset;
     private float mZCoord;
     [SerializeField] Estadisticas stats;
@@ -28,14 +29,17 @@ public class DragObjects : MonoBehaviour
             stats.BajarSalud();
             stats.SubirAlimentacion();
             actualizar.Actualizar();
+
         }
-        
+        estaArrast = false;
     }
     private void OnMouseDrag()
     { 
-        if(stats.alimentacion <= 99)
+        if(stats.alimentacion <= 99) { 
             transform.position = GetMouseWorldPos() + mOffset;
-       
+            estaArrast = true;
+        }
+
     }
 
     private Vector3 GetMouseWorldPos()
@@ -52,7 +56,14 @@ public class DragObjects : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             estaDentro = true;
+        }
+    }
 
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            estaDentro = false;
         }
     }
 

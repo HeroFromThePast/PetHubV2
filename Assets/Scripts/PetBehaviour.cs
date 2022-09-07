@@ -4,7 +4,9 @@ using UnityEngine;
 using UnityEngine.AI;
 public class PetBehaviour : MonoBehaviour
 {
-   NavMeshAgent agent;
+    [SerializeField] DragObjects dragO;
+    private Vector3 iniPos;
+    NavMeshAgent agent;
     [SerializeField] public Transform[] waypoints;
     [SerializeField] int waypointIndex;
     [SerializeField] float stoppedTime = 0;
@@ -20,14 +22,21 @@ public class PetBehaviour : MonoBehaviour
         Debug.Log(System.DateTime.Now);
         waypointIndex = Random.Range(0, waypoints.Length);
         UpdateDestination();
+        iniPos = this.gameObject.transform.position;
     }
 
     private void Update()
     {
-        if (Vector3.Distance(transform.position, target) <= 0.1f)
+        if (dragO.estaArrast == false) { 
+            if (Vector3.Distance(transform.position, target) <= 0.1f)
+            {
+                UpdateIndex();      
+            }         
+        }else
         {
-            UpdateIndex();      
+            this.gameObject.transform.position = iniPos;
         }
+
     }
 
     
