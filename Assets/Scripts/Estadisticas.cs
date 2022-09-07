@@ -27,7 +27,7 @@ public class Estadisticas : MonoBehaviour
         bajarAl.GEvent += BajarAlimentacion;
         bajarS.GEvent += BajarSalud;
     }
-    void SubirSalud()
+    public void SubirSalud()
     {
         salud += aumentoS;
         if (salud > 100)
@@ -35,7 +35,7 @@ public class Estadisticas : MonoBehaviour
             salud = 100;
         }
     }
-    void SubirAlimentacion()
+    public void SubirAlimentacion()
     {
         alimentacion += aumentoAl;
         if (alimentacion > 100)
@@ -43,7 +43,7 @@ public class Estadisticas : MonoBehaviour
             alimentacion = 100;
         }
     }
-    void SubirAnimo()
+    public void SubirAnimo()
     {
         animo += aumentoA;
         if (animo > 100)
@@ -51,7 +51,7 @@ public class Estadisticas : MonoBehaviour
             animo = 100;
         }
     }
-    void BajarSalud()
+    public void BajarSalud()
     {
         salud -= disminucionS;
         if (salud < 1)
@@ -59,7 +59,7 @@ public class Estadisticas : MonoBehaviour
             salud = 1;
         }
     }
-    void BajarAlimentacion()
+    public void BajarAlimentacion()
     {
         alimentacion -= disminucionAl;
         if (alimentacion < 1)
@@ -67,7 +67,7 @@ public class Estadisticas : MonoBehaviour
             alimentacion = 1;
         }
     }
-    void BajarAnimo()
+    public void BajarAnimo()
     {
         animo -= disminucionA;
         if (animo < 1)

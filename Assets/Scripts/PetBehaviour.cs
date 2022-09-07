@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 public class PetBehaviour : MonoBehaviour
 {
-   NavMeshAgent agent;
+    NavMeshAgent agent;
     [SerializeField] public Transform[] waypoints;
     [SerializeField] int waypointIndex;
     [SerializeField] float stoppedTime = 0;
@@ -24,8 +24,8 @@ public class PetBehaviour : MonoBehaviour
     }
 
     private void Update()
-    {      
-        if (Vector3.Distance(transform.position, target) <= 0.1f)
+    {
+       if (Vector3.Distance(transform.position, target) <= 0.1f)
         {
             UpdateIndex();      
         }
