@@ -14,7 +14,7 @@ public class ActualizarStats : MonoBehaviour
         actualizar.GEvent += Actualizar;
         Actualizar();
     }
-    void Actualizar()
+    public void Actualizar()
     {
         salud.text = stats.salud.ToString();
         alimentacion.text = stats.alimentacion.ToString();
