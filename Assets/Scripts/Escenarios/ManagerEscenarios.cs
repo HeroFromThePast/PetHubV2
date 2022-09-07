@@ -8,11 +8,11 @@ public class ManagerEscenarios : MonoBehaviour
     [SerializeField] Vector3[] posicionInicial;
     [SerializeField] Vector3 posicionJuego;
     [SerializeField] GameObject[] escenarios;
-    [SerializeField] int escenariosActual,escenarioNuevo;
+    public int escenariosActual,escenarioNuevo;
     [SerializeField] float tiempoDeCambio;
     void Start()
     {
-        
+        CambiarEscenario(Random.Range(0,3));
         escP.GEvent += CambiaraPrimero;
         escS.GEvent += CambiaraSegundo;
         escT.GEvent += CambiaraTercero;
