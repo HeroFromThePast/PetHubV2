@@ -10,20 +10,21 @@ public class PetBehaviour : MonoBehaviour
     [SerializeField] float stoppedTime = 0;
     Vector3 target;
     [SerializeField] float timer;
-    
+    [SerializeField] ManagerEscenarios managerEscenarios;
+
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();           
     }
     private void Start()
-    {
+    {      
         Debug.Log(System.DateTime.Now);
-        waypointIndex = Random.Range(0, waypoints.Length);
+        //waypointIndex = Random.Range(0, waypoints.Length);
         UpdateDestination();
     }
 
     private void Update()
-    {
+    {      
         if (Vector3.Distance(transform.position, target) <= 0.1f)
         {
             UpdateIndex();      
@@ -44,12 +45,34 @@ public class PetBehaviour : MonoBehaviour
         actualIndex = waypointIndex;
         if(timer >= stoppedTime)
         {
-            waypointIndex = Random.Range(0, waypoints.Length);
-            do
+            if (managerEscenarios.escenariosActual == 0)
             {
-                waypointIndex = Random.Range(0, waypoints.Length);
+                waypointIndex = Random.Range(0, 6);
+                do
+                {
+                    waypointIndex = Random.Range(0, 6);
+                }
+                while (waypointIndex == actualIndex);
             }
-            while(waypointIndex == actualIndex);
+            else if (managerEscenarios.escenariosActual == 1)
+            {
+                waypointIndex = Random.Range(5, 11);
+                do
+                {
+                    waypointIndex = Random.Range(5, 11);
+                }
+                while (waypointIndex == actualIndex);
+            }
+            else if (managerEscenarios.escenariosActual == 2)
+            {
+                waypointIndex = Random.Range(10, 16);
+                do
+                {
+                    waypointIndex = Random.Range(10, 16);
+                }
+                while (waypointIndex == actualIndex);
+            }
+
 
             UpdateDestination();
             timer = 0;
