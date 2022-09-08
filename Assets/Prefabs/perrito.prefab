@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 270499975}
   m_Layer: 0
   m_Name: perrito
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,7 +96,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2708429312771656840}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   salud: 100
-  alimentacion: 100
+  alimentacion: 95.89
   animo: 100
   subirA: {fileID: 11400000, guid: e87c9b9d4fb61594682eb03a8f2149da, type: 2}
   subirAl: {fileID: 11400000, guid: 293f4183b2eaba24cbff607a329b620c, type: 2}
@@ -143,6 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minutes: 0
   seconds: 15
+  loop: 0
   inicioTimer: {fileID: 11400000, guid: 656a2cee72bc878499971595487839fc, type: 2}
   evento:
   - {fileID: 11400000, guid: e87c9b9d4fb61594682eb03a8f2149da, type: 2}
@@ -168,7 +169,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc7c4264b8b3da4479f7c99e8a6106db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stats: {fileID: 0}
+  dragobj: {fileID: 0}
   waypoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -177,6 +191,7 @@ MonoBehaviour:
   waypointIndex: 0
   stoppedTime: 0
   timer: 0
+  managerEscenarios: {fileID: 0}
 --- !u!195 &270499975
 NavMeshAgent:
   m_ObjectHideFlags: 0
