@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.AI;
 public class PetBehaviour : MonoBehaviour
 {
+    [SerializeField] Estadisticas stats;
+    [SerializeField] DragObjects dragobj;
+    //[SerializeField] Eventos propEntregado;
     NavMeshAgent agent;
     [SerializeField] public Transform[] waypoints;
     [SerializeField] int waypointIndex;
@@ -17,7 +20,8 @@ public class PetBehaviour : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();           
     }
     private void Start()
-    {      
+    {
+        //propEntregado.GEvent += UpdateDestination;
         Debug.Log(System.DateTime.Now);
         //waypointIndex = Random.Range(0, waypoints.Length);
         UpdateDestination();
@@ -25,9 +29,25 @@ public class PetBehaviour : MonoBehaviour
 
     private void Update()
     {
-       if (Vector3.Distance(transform.position, target) <= 0.1f)
+        if(stats.salud <= 60 || stats.alimentacion <=50 || stats.animo <= 50)
+        {
+            agent.speed = 4;
+        }
+        else if (stats.salud > 60 || stats.alimentacion > 50 || stats.animo > 50)
+        {
+            agent.speed = 8;
+        }
+        if (Vector3.Distance(transform.position, target) <= 0.1f )
         {
             UpdateIndex();      
+        }
+        else if (dragobj.estaArrast == true)
+        {
+            agent.SetDestination(waypoints[15].position);
+        }
+        else if(dragobj.estaArrast == false)
+        {
+            UpdateIndex();
         }
     }
 
@@ -37,7 +57,7 @@ public class PetBehaviour : MonoBehaviour
     {
         if (stoppedTime == 0)
         {
-            stoppedTime = Random.Range(2, 9);
+            stoppedTime = Random.Range(2, 5);
         }
         //transform.position = target;
         int actualIndex;  
@@ -72,7 +92,6 @@ public class PetBehaviour : MonoBehaviour
                 }
                 while (waypointIndex == actualIndex);
             }
-
 
             UpdateDestination();
             timer = 0;
