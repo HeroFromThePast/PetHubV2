@@ -3,7 +3,14 @@ guid: 4434c1c82cb4ba947ab7af5c0cb5968c
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - alterarStats: {fileID: 11400000, guid: 3a6fef7f673048841902c4de8b19ccac, type: 2}
+  - subirA: {fileID: 11400000, guid: e87c9b9d4fb61594682eb03a8f2149da, type: 2}
+  - subirAl: {fileID: 11400000, guid: 293f4183b2eaba24cbff607a329b620c, type: 2}
+  - subirS: {fileID: 11400000, guid: 7b04e041081bc874a998c28d4bf9ec4f, type: 2}
+  - bajarA: {fileID: 11400000, guid: 2fb6dd718dca765498180bf0940449a7, type: 2}
+  - bajarAl: {fileID: 11400000, guid: 06ace03ff8cb5674ba53295a0fa27763, type: 2}
+  - bajarS: {fileID: 11400000, guid: 97eb7399f200a82409646f6b81d79cd2, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

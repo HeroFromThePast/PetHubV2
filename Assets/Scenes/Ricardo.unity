@@ -247,6 +247,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1473515811}
+  - component: {fileID: 1473515814}
+  - component: {fileID: 1473515813}
+  - component: {fileID: 1473515812}
   m_Layer: 0
   m_Name: manager
   m_TagString: Untagged
@@ -269,6 +272,70 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1473515812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1473515808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8a12e9f1f8f19a4fb7f7d2ebd8b6c0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  e1: {fileID: 11400000, guid: a7bb2367045a49249a4803a3bc6c0d63, type: 2}
+  e2: {fileID: 11400000, guid: d661cf55493a0e145b3e653e99612207, type: 2}
+--- !u!114 &1473515813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1473515808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4434c1c82cb4ba947ab7af5c0cb5968c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  salud: 70
+  alimentacion: 70
+  animo: 70
+  alterarStats: {fileID: 11400000, guid: 3a6fef7f673048841902c4de8b19ccac, type: 2}
+  subirA: {fileID: 11400000, guid: e87c9b9d4fb61594682eb03a8f2149da, type: 2}
+  subirAl: {fileID: 11400000, guid: 293f4183b2eaba24cbff607a329b620c, type: 2}
+  subirS: {fileID: 11400000, guid: 7b04e041081bc874a998c28d4bf9ec4f, type: 2}
+  bajarA: {fileID: 11400000, guid: 2fb6dd718dca765498180bf0940449a7, type: 2}
+  bajarAl: {fileID: 11400000, guid: 06ace03ff8cb5674ba53295a0fa27763, type: 2}
+  bajarS: {fileID: 11400000, guid: 97eb7399f200a82409646f6b81d79cd2, type: 2}
+  aumentoS: 0
+  aumentoAl: 0
+  aumentoA: 0
+  disminucionS: 0
+  disminucionAl: 0
+  disminucionA: 0
+--- !u!114 &1473515814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1473515808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fc1e47560173984e9b13d88946b1eb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  situaciones:
+  - {fileID: 11400000, guid: d96ee6eb3d3365342b6687736cf5b414, type: 2}
+  - {fileID: 11400000, guid: 267581807ed559f4ea1c5695713e96b5, type: 2}
+  - {fileID: 11400000, guid: bfc36cd6747d214438324ec48f7b1a25, type: 2}
+  recibirPedigree: {fileID: 11400000, guid: a7bb2367045a49249a4803a3bc6c0d63, type: 2}
+  recibirPollo: {fileID: 11400000, guid: 74d0c95e82975984293af42ea26aa622, type: 2}
+  recibirChocolate: {fileID: 11400000, guid: d661cf55493a0e145b3e653e99612207, type: 2}
+  alterarStats: {fileID: 11400000, guid: 3a6fef7f673048841902c4de8b19ccac, type: 2}
+  actualizarStats: {fileID: 11400000, guid: 0ecad5114bf09224e973e0a54d2f17bf, type: 2}
+  mascota: {fileID: 1473515813}
 --- !u!1 &1943960824
 GameObject:
   m_ObjectHideFlags: 0
