@@ -500,7 +500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 064719372f05d884f841a5974dfc503e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propEntregado: {fileID: 11400000, guid: f096c97ef9c803b4ea2ce7895153889a, type: 2}
+  propEntregado: {fileID: 11400000, guid: 74d0c95e82975984293af42ea26aa622, type: 2}
 --- !u!1 &255033488
 GameObject:
   m_ObjectHideFlags: 0
@@ -3774,9 +3774,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af3af011251cca04892f02dab184f7fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  salud: {fileID: 0}
-  alimentacion: {fileID: 0}
-  animo: {fileID: 0}
+  salud: {fileID: 1852290664}
+  alimentacion: {fileID: 1122165973}
+  animo: {fileID: 888793238}
   stats: {fileID: 76908494}
   actualizar: {fileID: 11400000, guid: 0ecad5114bf09224e973e0a54d2f17bf, type: 2}
 --- !u!114 &1267181866
@@ -3792,8 +3792,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   situaciones:
-  - {fileID: 11400000, guid: 5d0bcc5edaf39454bb34f05b53984d0f, type: 2}
-  - {fileID: 11400000, guid: cd6882dc71bf45440905754d91e3ac47, type: 2}
+  - {fileID: 11400000, guid: d96ee6eb3d3365342b6687736cf5b414, type: 2}
+  - {fileID: 11400000, guid: 267581807ed559f4ea1c5695713e96b5, type: 2}
+  - {fileID: 11400000, guid: bfc36cd6747d214438324ec48f7b1a25, type: 2}
+  recibirPedigree: {fileID: 11400000, guid: a7bb2367045a49249a4803a3bc6c0d63, type: 2}
+  recibirPollo: {fileID: 11400000, guid: 74d0c95e82975984293af42ea26aa622, type: 2}
+  recibirChocolate: {fileID: 11400000, guid: d661cf55493a0e145b3e653e99612207, type: 2}
+  alterarStats: {fileID: 11400000, guid: 3a6fef7f673048841902c4de8b19ccac, type: 2}
+  actualizarStats: {fileID: 11400000, guid: 0ecad5114bf09224e973e0a54d2f17bf, type: 2}
   mascota: {fileID: 76908494}
 --- !u!4 &1267181867
 Transform:
@@ -8424,9 +8430,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 254017041}
     - target: {fileID: 270499969, guid: e0ae6acf4bcc1e9468040381bdb0ea90, type: 3}
+      propertyPath: stats
+      value: 
+      objectReference: {fileID: 76908494}
+    - target: {fileID: 270499969, guid: e0ae6acf4bcc1e9468040381bdb0ea90, type: 3}
+      propertyPath: dragobj
+      value: 
+      objectReference: {fileID: 254017041}
+    - target: {fileID: 270499969, guid: e0ae6acf4bcc1e9468040381bdb0ea90, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 270499969, guid: e0ae6acf4bcc1e9468040381bdb0ea90, type: 3}
+      propertyPath: managerEscenarios
+      value: 
+      objectReference: {fileID: 1267181869}
     - target: {fileID: 270499969, guid: e0ae6acf4bcc1e9468040381bdb0ea90, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
@@ -8504,9 +8522,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2708429312771656847, guid: e0ae6acf4bcc1e9468040381bdb0ea90, type: 3}
-      propertyPath: alimentacion
-      value: 95.89
+      propertyPath: animo
+      value: 70
       objectReference: {fileID: 0}
+    - target: {fileID: 2708429312771656847, guid: e0ae6acf4bcc1e9468040381bdb0ea90, type: 3}
+      propertyPath: salud
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 2708429312771656847, guid: e0ae6acf4bcc1e9468040381bdb0ea90, type: 3}
+      propertyPath: alimentacion
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 2708429312771656847, guid: e0ae6acf4bcc1e9468040381bdb0ea90, type: 3}
+      propertyPath: alterarStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 3a6fef7f673048841902c4de8b19ccac, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0ae6acf4bcc1e9468040381bdb0ea90, type: 3}
 --- !u!1001 &7335852343534208293

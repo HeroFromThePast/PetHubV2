@@ -11,21 +11,29 @@ public class Estadisticas : MonoBehaviour
     }
      public float salud, alimentacion, animo;
     
-    [SerializeField] Eventos subirA, subirAl, subirS, bajarA, bajarAl, bajarS;
+    [SerializeField] Eventos alterarStats,subirA,subirAl,subirS,bajarA,bajarAl,bajarS;
     public float aumentoS,aumentoAl,aumentoA,disminucionS, disminucionAl, disminucionA;
 
     private void Start()
     {
-        //salud = 100;
-        //hambre = 1;
-        //animo = 100;
+        
         instance = this;
+        alterarStats.GEvent += AlterarStats;
         subirA.GEvent += SubirAnimo;
         subirAl.GEvent += SubirAlimentacion;
         subirS.GEvent += SubirSalud;
         bajarA.GEvent += BajarAnimo;
         bajarAl.GEvent += BajarAlimentacion;
         bajarS.GEvent += BajarSalud;
+    }
+    void AlterarStats()
+    {
+        SubirSalud();
+        SubirAlimentacion();
+        SubirAnimo();
+        BajarSalud();
+        BajarAlimentacion();
+        BajarAnimo();
     }
     public void SubirSalud()
     {
@@ -77,6 +85,7 @@ public class Estadisticas : MonoBehaviour
     }
     private void OnDestroy()
     {
+        alterarStats.GEvent -= AlterarStats;
         subirA.GEvent -= SubirAnimo;
         subirAl.GEvent -= SubirAlimentacion;
         subirS.GEvent -= SubirSalud;
