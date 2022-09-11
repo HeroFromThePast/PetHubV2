@@ -6,9 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
+    path: Assets/Scenes/Juan Jose.unity
+    guid: 1881c15e33e811141a55342737ddf266
+  - enabled: 1
+    path: Assets/Scenes/LogoPPP.unity
+    guid: a9ea17c4dbe742c45861e8a6f24577ff
+  - enabled: 1
+    path: Assets/Scenes/LogoPH.unity
+    guid: 39e47132f15e0454d87019fab12d61ab
+  - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/Juan Jose.unity
-    guid: 1881c15e33e811141a55342737ddf266
+    path: Assets/Scenes/Tutorial.unity
+    guid: d96014c9dce1cb747bcbbe1dd91c552a
   m_configObjects: {}
