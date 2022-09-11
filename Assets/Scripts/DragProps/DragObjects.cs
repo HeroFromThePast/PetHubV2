@@ -5,14 +5,19 @@ using UnityEngine.EventSystems;
 
 public class DragObjects : MonoBehaviour
 {
-    private bool estaDentro = false;
+    private bool estaPollo = false, estaChocolate = false, estaCuido = false;
     public bool estaArrast = false;
     private Vector3 mOffset;
     private float mZCoord;
     [SerializeField] Estadisticas stats;
     [SerializeField] PropsyStats prop;
     [SerializeField] ActualizarStats actualizar;
+    private Vector3 posIni;
 
+    private void Start()
+    {
+        posIni = this.gameObject.transform.position;
+    }
     void OnMouseDown()
     {
         mZCoord = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
@@ -21,7 +26,7 @@ public class DragObjects : MonoBehaviour
 
     void OnMouseUp()
     {
-        if (estaDentro)
+        if (estaPollo)
         {
             prop.EntregarProp();
             stats.aumentoAl = 20;
@@ -30,8 +35,20 @@ public class DragObjects : MonoBehaviour
             stats.SubirAlimentacion();
             actualizar.Actualizar();
 
+        }else if (estaChocolate){
+            prop.EntregarProp();
+            stats.disminucionS = 40;
+            stats.BajarSalud();
+            actualizar.Actualizar();
+        }else if (estaCuido)
+        {
+            prop.EntregarProp();
+            stats.aumentoAl = 40;
+            stats.SubirAlimentacion();
+            actualizar.Actualizar();
         }
         estaArrast = false;
+        this.gameObject.transform.position = posIni;
     }
     private void OnMouseDrag()
     { 
@@ -55,7 +72,16 @@ public class DragObjects : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            estaDentro = true;
+            if (this.gameObject.tag == "Pollo") { 
+            
+                estaPollo = true;
+            }else if( this.gameObject.tag == "Chocolate")
+            {
+                estaChocolate = true;
+            }else if (this.gameObject.tag == "Cuido")
+            {
+                estaCuido = true;
+            }
         }
     }
 
@@ -63,7 +89,9 @@ public class DragObjects : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            estaDentro = false;
+            estaPollo = false;
+            estaChocolate = false;
+            estaCuido = false;
         }
     }
 
