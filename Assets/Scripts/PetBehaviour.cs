@@ -17,7 +17,7 @@ public class PetBehaviour : MonoBehaviour
 
     private void Awake()
     {
-        agent = GetComponent<NavMeshAgent>();           
+        agent = GetComponent<NavMeshAgent>();
     }
     private void Start()
     {
