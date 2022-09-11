@@ -16,7 +16,7 @@ public class ManagerCinematicayContrato : MonoBehaviour
     IEnumerator EsperarCinematica()
     {
         yield return new WaitForSeconds(tiempoCinematica);
-        Debug.Log("sale contrato");
+        //Debug.Log("sale contrato");
         aparecerContrato.FireEvent();
     }
     void CargarJuego()
