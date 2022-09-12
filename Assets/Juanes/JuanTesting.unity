@@ -5268,8 +5268,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aparicionBoton: 1
-  posicionNueva: {x: 0, y: 190}
-  posicionInicial: {x: 0, y: -10.861}
+  posicionNueva: {x: 0, y: 200}
+  posicionInicial: {x: 0, y: 10}
   aparicion: {fileID: 11400000, guid: 8d3f60ebb7fd8e848b89e4b612435e20, type: 2}
   desaparicion: {fileID: 11400000, guid: da77624d8bb7af74f858a79acbc1cbcc, type: 2}
 --- !u!114 &3791058602677965535
@@ -5533,8 +5533,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aparicionBoton: 1
-  posicionNueva: {x: 0, y: 128}
-  posicionInicial: {x: 0, y: -10.861}
+  posicionNueva: {x: 0, y: 130}
+  posicionInicial: {x: 0, y: 10}
   aparicion: {fileID: 11400000, guid: 8d3f60ebb7fd8e848b89e4b612435e20, type: 2}
   desaparicion: {fileID: 11400000, guid: da77624d8bb7af74f858a79acbc1cbcc, type: 2}
 --- !u!114 &3791058602786784564
@@ -5550,7 +5550,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -6397,7 +6397,7 @@ MonoBehaviour:
   aparicionTip: 1
   aparecerTip: {fileID: 11400000, guid: 325132dda7faff8448a8cd577eca0589, type: 2}
   desaparecerTip: {fileID: 11400000, guid: 73262e2663dc3a540a189e911e8e4360, type: 2}
-  posicionNueva: {x: -105, y: -0.1011658}
+  posicionNueva: {x: -40, y: 20}
   posicionInicial: {x: -105, y: 103}
 --- !u!114 &3791058603325920617
 MonoBehaviour:
@@ -7298,7 +7298,7 @@ MonoBehaviour:
   aparicionTip: 1
   aparecerTip: {fileID: 11400000, guid: 33163caa456634c4e983a1dca67fa02f, type: 2}
   desaparecerTip: {fileID: 11400000, guid: 4f31c16e76a100a4fab5c50e0b296507, type: 2}
-  posicionNueva: {x: 118.33, y: -0.1011658}
+  posicionNueva: {x: -40, y: 136}
   posicionInicial: {x: 118.33, y: 103}
 --- !u!114 &3791058603597871049
 MonoBehaviour:
@@ -7320,7 +7320,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 535d5068f6e6f4174a907fe1688dc8c1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 74114cc50585c4f6785798e3d7f07fc8, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8515,7 +8515,7 @@ MonoBehaviour:
   aparicionTip: 1
   aparecerTip: {fileID: 11400000, guid: f66e33c0278723c429219cb30fdf8d49, type: 2}
   desaparecerTip: {fileID: 11400000, guid: c0c11d3258d4e7943ad29845d70cb35a, type: 2}
-  posicionNueva: {x: 0, y: -0.1011658}
+  posicionNueva: {x: -40, y: 222}
   posicionInicial: {x: 0, y: 103}
 --- !u!114 &3791058604265905305
 MonoBehaviour:
@@ -8537,7 +8537,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 535d5068f6e6f4174a907fe1688dc8c1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 74114cc50585c4f6785798e3d7f07fc8, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1

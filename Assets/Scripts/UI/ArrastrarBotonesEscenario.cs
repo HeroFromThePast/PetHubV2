@@ -10,6 +10,7 @@ public class ArrastrarBotonesEscenario : MonoBehaviour
 
     void Start()
     {
+
         transform.localPosition = posicionInicial;
         aparicion.GEvent += ArrastrarBoton;
         desaparicion.GEvent += DesaparecerBoton;
