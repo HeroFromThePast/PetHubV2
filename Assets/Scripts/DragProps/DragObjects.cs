@@ -12,6 +12,7 @@ public class DragObjects : MonoBehaviour
     [SerializeField] Estadisticas stats;
     [SerializeField] PropsyStats prop;
     [SerializeField] ActualizarStats actualizar;
+    [SerializeField] SonidosManager soundManager;
     private Vector3 posIni;
 
     private void Start()
@@ -34,6 +35,7 @@ public class DragObjects : MonoBehaviour
             stats.BajarSalud();
             stats.SubirAlimentacion();
             actualizar.Actualizar();
+            soundManager.Eructo();
 
         }else if (estaChocolate)
         {
@@ -41,12 +43,15 @@ public class DragObjects : MonoBehaviour
             stats.disminucionS = 40;
             stats.BajarSalud();
             actualizar.Actualizar();
+            soundManager.Ladrido();
+
         }else if (estaCuido)
         {
             prop.EntregarProp();
             stats.aumentoAl = 40;
             stats.SubirAlimentacion();
             actualizar.Actualizar();
+            soundManager.Masticar();
         }
         estaArrast = false;
         this.gameObject.transform.position = posIni;
