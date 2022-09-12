@@ -5,7 +5,7 @@ using UnityEngine.AI;
 public class PetBehaviour : MonoBehaviour
 {
     [SerializeField] Estadisticas stats;
-    [SerializeField] DragObjects dragobj;
+    [SerializeField] DragObjects[] dragobj;
     //[SerializeField] Eventos propEntregado;
     NavMeshAgent agent;
     [SerializeField] public Transform[] waypoints;
@@ -41,11 +41,11 @@ public class PetBehaviour : MonoBehaviour
         {
             UpdateIndex();      
         }
-        else if (dragobj.estaArrast == true)
+        else if (dragobj[0].estaArrast == true || dragobj[1].estaArrast == true || dragobj[2].estaArrast == true)
         {
             agent.SetDestination(waypoints[15].position);
         }
-        else if(dragobj.estaArrast == false)
+        else if(dragobj[0].estaArrast == false || dragobj[1].estaArrast == false || dragobj[2].estaArrast == false)
         {
             UpdateIndex();
         }
