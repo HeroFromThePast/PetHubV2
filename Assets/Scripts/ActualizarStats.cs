@@ -16,9 +16,9 @@ public class ActualizarStats : MonoBehaviour
     }
     public void Actualizar()
     {
-        salud.text = stats.salud.ToString();
-        alimentacion.text = stats.alimentacion.ToString();
-        animo.text = stats.animo.ToString();
+        salud.text = stats.salud.ToString()+"%";
+        alimentacion.text = stats.alimentacion.ToString() + "%";
+        animo.text = stats.animo.ToString() + "%";
     }
     private void OnDestroy()
     {
