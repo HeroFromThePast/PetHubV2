@@ -12,7 +12,8 @@ public class ManagerEscenarios : MonoBehaviour
     [SerializeField] float tiempoDeCambio;
     void Start()
     {
-        CambiarEscenario(Random.Range(0,3));
+        //CambiarEscenario(Random.Range(0,3));
+        CambiaraSegundo();
         escP.GEvent += CambiaraPrimero;
         escS.GEvent += CambiaraSegundo;
         escT.GEvent += CambiaraTercero;
