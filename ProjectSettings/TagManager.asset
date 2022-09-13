@@ -7,6 +7,9 @@ TagManager:
   - Pollo
   - Chocolate
   - Cuido
+  - MensajePlanner
+  - TextoTarea
+  - InputField
   layers:
   - Default
   - TransparentFX
