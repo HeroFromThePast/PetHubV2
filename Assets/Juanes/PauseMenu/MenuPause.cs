@@ -8,12 +8,28 @@ public class MenuPause : MonoBehaviour
     [SerializeField] GameObject pauseMenu;
     [SerializeField] GameObject Creditos;
     [SerializeField] GameObject PauseButton;
+    [SerializeField] GameObject Comedero;
+    [SerializeField] GameObject ComederoDogo;
 
     public void Paused()
     {
         pauseMenu.SetActive(true);
         PauseButton.SetActive(false);
         Time.timeScale = 0f;
+        // Debug.Log("pausado");
+
+    }
+    public void Comederoo()
+    {
+        Comedero.SetActive(true);
+        
+        // Debug.Log("pausado");
+
+    }
+    public void ComederoDogoOpen()
+    {
+        ComederoDogo.SetActive(true);
+
         // Debug.Log("pausado");
 
     }
@@ -37,6 +53,21 @@ public class MenuPause : MonoBehaviour
     {
         Creditos.SetActive(false);
         Time.timeScale = 1f;
+        //Debug.Log("Jugando");
+
+    }
+
+    public void ExitComedero()
+    {
+        Comedero.SetActive(false);
+        //Time.timeScale = 1f;
+        //Debug.Log("Jugando");
+
+    }
+    public void ExitComederoDogo()
+    {
+        ComederoDogo.SetActive(false);
+        //Time.timeScale = 1f;
         //Debug.Log("Jugando");
 
     }
