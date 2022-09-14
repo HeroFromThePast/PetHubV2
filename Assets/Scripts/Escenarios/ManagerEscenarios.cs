@@ -6,14 +6,15 @@ public class ManagerEscenarios : MonoBehaviour
 {
     [SerializeField] Eventos escP,escS,escT;
     [SerializeField] Vector3[] posicionInicial;
-    [SerializeField] Vector3 posicionJuego;
+    [SerializeField] Vector3[] posicionJuego;
     [SerializeField] GameObject[] escenarios;
     public int escenariosActual,escenarioNuevo;
     [SerializeField] float tiempoDeCambio;
     void Start()
     {
         //CambiarEscenario(Random.Range(0,3));
-        CambiaraSegundo();
+        CambiaraPrimero();
+        tiempoDeCambio = 0;
         escP.GEvent += CambiaraPrimero;
         escS.GEvent += CambiaraSegundo;
         escT.GEvent += CambiaraTercero;
@@ -38,12 +39,13 @@ public class ManagerEscenarios : MonoBehaviour
     }
     void CambiarEscenario(int escenarionuevo)
     {
+        tiempoDeCambio = 2;
         if (escenarionuevo != escenariosActual)
         {
             escenarios[escenariosActual].transform.LeanMoveLocal(posicionInicial[escenariosActual], tiempoDeCambio).setEaseOutQuart();
             //LeanTween.move(escenarios[escenariosActual], posicionInicial[escenariosActual],tiempoDeCambio).setEaseOutQuart();
             
-            escenarios[escenarionuevo].transform.LeanMoveLocal(posicionJuego, tiempoDeCambio).setEaseOutQuart();
+            escenarios[escenarionuevo].transform.LeanMoveLocal(posicionJuego[escenarionuevo], tiempoDeCambio).setEaseOutQuart();
             //LeanTween.move(escenarios[escenarionuevo], posicionJuego, tiempoDeCambio).setEaseOutQuart();
             
             escenariosActual = escenarionuevo;

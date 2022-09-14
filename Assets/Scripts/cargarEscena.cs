@@ -9,5 +9,6 @@ public class cargarEscena : MonoBehaviour
     public void CargarEscena()
     {
         SceneManager.LoadScene(nombreEscena);
+        
     }
 }
