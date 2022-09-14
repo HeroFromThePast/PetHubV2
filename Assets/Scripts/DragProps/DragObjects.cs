@@ -35,7 +35,7 @@ public class DragObjects : MonoBehaviour
             stats.BajarSalud();
             stats.SubirAlimentacion();
             actualizar.Actualizar();
-            soundManager.Eructo();
+            soundManager.Masticar();
 
         }else if (estaChocolate)
         {
@@ -43,7 +43,7 @@ public class DragObjects : MonoBehaviour
             stats.disminucionS = 40;
             stats.BajarSalud();
             actualizar.Actualizar();
-            soundManager.Ladrido();
+            soundManager.Masticar();
 
         }else if (estaCuido)
         {
