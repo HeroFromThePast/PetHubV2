@@ -14,7 +14,14 @@ public class Planner : MonoBehaviour
     [SerializeField] GameObject canvasPlanner;
     [SerializeField] TextMeshProUGUI texto1;
     [SerializeField] TextMeshProUGUI textoTarea;
+    
+    [SerializeField] TextMeshProUGUI textoNombre;
 
+
+    private void Start()
+    {
+        textoNombre.text = PlayerPrefs.GetString("NombrePerro");
+    }
     void Update()
     {
         if (contando) { 
@@ -25,7 +32,6 @@ public class Planner : MonoBehaviour
             AparecerBoton();
             contando = false;
         }
-        Debug.Log(timer);
     }
 
     public void AparecerBoton()    

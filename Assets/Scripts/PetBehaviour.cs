@@ -15,6 +15,10 @@ public class PetBehaviour : MonoBehaviour
     [SerializeField] float timer;
     [SerializeField] ManagerEscenarios managerEscenarios;
 
+    [Header("Animacion")]
+    [SerializeField] Animator animator;
+    [SerializeField] string condicion;
+
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();           
@@ -25,6 +29,7 @@ public class PetBehaviour : MonoBehaviour
         Debug.Log(System.DateTime.Now);
         //waypointIndex = Random.Range(0, waypoints.Length);
         UpdateDestination();
+        animator.SetBool(condicion, false);
     }
 
     private void Update()
@@ -49,6 +54,12 @@ public class PetBehaviour : MonoBehaviour
         {
             UpdateIndex();
         }
+
+        if (dragobj[0].estaArrast == true || dragobj[1].estaArrast == true || dragobj[2].estaArrast == true)
+        {
+            animator.SetBool(condicion, true);
+        }
+        else animator.SetBool(condicion, false);
     }
 
     

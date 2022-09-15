@@ -10,6 +10,7 @@ public class ManagerEscenarios : MonoBehaviour
     [SerializeField] GameObject[] escenarios;
     public int escenariosActual,escenarioNuevo;
     [SerializeField] float tiempoDeCambio;
+    [SerializeField] GameObject pollo, chocolate, cuido;
     void Start()
     {
         //CambiarEscenario(Random.Range(0,3));
@@ -25,6 +26,9 @@ public class ManagerEscenarios : MonoBehaviour
     {
         escenarioNuevo = 0;
         CambiarEscenario(escenarioNuevo);
+        pollo.SetActive(true);
+        chocolate.SetActive(true);
+        cuido.SetActive(true);
     }
     void CambiaraSegundo()
     {
