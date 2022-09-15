@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class MenuPause : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
+    [SerializeField] GameObject PanelTienda;
     [SerializeField] GameObject Creditos;
     [SerializeField] GameObject PauseButton;
     [SerializeField] GameObject Comedero;
@@ -83,6 +84,17 @@ public class MenuPause : MonoBehaviour
     {
 
         Application.Quit();
+    }
+    public void TiendaOpen()
+    {
+        PanelTienda.SetActive(true);
+        Debug.Log("abriolatienda");
+
+    }
+    public void CloseTienda()
+    {
+        PanelTienda.SetActive(false);
+
     }
 
 
