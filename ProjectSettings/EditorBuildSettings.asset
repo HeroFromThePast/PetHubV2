@@ -15,9 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/LogoPH.unity
     guid: 39e47132f15e0454d87019fab12d61ab
   - enabled: 1
-    path: Assets/Scenes/Main.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: d96014c9dce1cb747bcbbe1dd91c552a
+  - enabled: 1
+    path: Assets/Scenes/Main.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}
