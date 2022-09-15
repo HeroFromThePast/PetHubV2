@@ -395,8 +395,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: LoginCanvas (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3370649486060696660, guid: a272cf0d290ac314b9b19889b1cd6e2d, type: 3}
+      propertyPath: boton
+      value: 
+      objectReference: {fileID: 655000358}
+    - target: {fileID: 3370649486060696660, guid: a272cf0d290ac314b9b19889b1cd6e2d, type: 3}
+      propertyPath: panel
+      value: 
+      objectReference: {fileID: 684282772}
+    - target: {fileID: 3370649486060696660, guid: a272cf0d290ac314b9b19889b1cd6e2d, type: 3}
+      propertyPath: aparecerContrato
+      value: 
+      objectReference: {fileID: 11400000, guid: 041f3b90bc1a71a469ec73f293341942, type: 2}
+    - target: {fileID: 3370649486476370664, guid: a272cf0d290ac314b9b19889b1cd6e2d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a272cf0d290ac314b9b19889b1cd6e2d, type: 3}
+--- !u!1 &655000358 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3370649486060696657, guid: a272cf0d290ac314b9b19889b1cd6e2d, type: 3}
+  m_PrefabInstance: {fileID: 619229450}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &684282772 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3370649486147049944, guid: a272cf0d290ac314b9b19889b1cd6e2d, type: 3}
+  m_PrefabInstance: {fileID: 619229450}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &691662168
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,7 +487,8 @@ MonoBehaviour:
   canvasContrato: {fileID: 2076845980}
   canvasNombre: {fileID: 190523615}
   tutorial: {fileID: 1748451461}
-  nombre: {fileID: 3081208903237940277}
+  botonSaltar: {fileID: 655000358}
+  nombre: {fileID: 1752195887}
 --- !u!1 &799291366
 GameObject:
   m_ObjectHideFlags: 0
@@ -886,6 +913,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3370649484673742798, guid: a272cf0d290ac314b9b19889b1cd6e2d, type: 3}
   m_PrefabInstance: {fileID: 619229450}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1752195887 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 289449689139955404, guid: a272cf0d290ac314b9b19889b1cd6e2d, type: 3}
+  m_PrefabInstance: {fileID: 619229450}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da0c512f12947e489f739169773d7ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2076845980 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3370649486319174943, guid: a272cf0d290ac314b9b19889b1cd6e2d, type: 3}

@@ -17,7 +17,7 @@ public class DragObjects : MonoBehaviour
     private Vector3 posIni;
 
     [SerializeField] TextMeshProUGUI textoTip;
-    [SerializeField] GameObject holderTip;
+    [SerializeField] GameObject holderTip, holderAlertaC;
 
     private void Start()
     {
@@ -27,6 +27,9 @@ public class DragObjects : MonoBehaviour
     {
         mZCoord = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
         mOffset = gameObject.transform.position - GetMouseWorldPos();
+
+        if (stats.alimentacion >= 99)
+        holderAlertaC.SetActive(true);
     }
 
     void OnMouseUp()

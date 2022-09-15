@@ -35,11 +35,17 @@ public class ManagerEscenarios : MonoBehaviour
        
         escenarioNuevo = 1;
         CambiarEscenario(escenarioNuevo);
+        pollo.SetActive(false);
+        chocolate.SetActive(false);
+        cuido.SetActive(false);
     }
     void CambiaraTercero()
     {
         escenarioNuevo = 2;
         CambiarEscenario(escenarioNuevo);
+        pollo.SetActive(false);
+        chocolate.SetActive(false);
+        cuido.SetActive(false);
     }
     void CambiarEscenario(int escenarionuevo)
     {

@@ -8,7 +8,7 @@ using UnityEngine;
 public class PantallasContrato : MonoBehaviour
 {
     [SerializeField] Eventos contrato;
-    [SerializeField] GameObject canvasContrato, canvasNombre,tutorial;
+    [SerializeField] GameObject canvasContrato, canvasNombre,tutorial, botonSaltar;
     [SerializeField] TMP_InputField nombre;
     string nombrePerro;
 
@@ -23,6 +23,7 @@ public class PantallasContrato : MonoBehaviour
     {
         tutorial.LeanScale(Vector3.zero, 1f).setEaseInOutQuart();
         canvasNombre.LeanScale(Vector3.one, 1f).setEaseInOutQuart();
+        botonSaltar.SetActive(false);
     }
 
     public void OnContinue()

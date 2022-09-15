@@ -10,6 +10,8 @@ public class TutoSkip : MonoBehaviour
     [SerializeField] GameObject PauseTuto;
     [SerializeField] AudioSource MyAudioSource;
     [SerializeField] VideoPlayer MiVideoPlayer;
+    [SerializeField] Eventos aparecerContrato;
+    [SerializeField] GameObject panel, boton;
 
     public void Paused()
     {
@@ -33,11 +35,12 @@ public class TutoSkip : MonoBehaviour
         MiVideoPlayer.Play();
     }
 
-    public void LoadMain(int Main)
+    public void LoadMain()
     {
         Time.timeScale = 1f;
-        //Debug.Log("Cargando_Menu");
-        SceneManager.LoadScene(Main);
+        aparecerContrato.FireEvent();
+        panel.SetActive(false);
+        boton.SetActive(false);
     }
 
    
