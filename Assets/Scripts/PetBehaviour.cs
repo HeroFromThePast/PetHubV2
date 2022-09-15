@@ -51,6 +51,7 @@ public class PetBehaviour : MonoBehaviour
         else if (dragobj[0].estaArrast == true || dragobj[1].estaArrast == true || dragobj[2].estaArrast == true)
         {
             agent.SetDestination(waypoints[15].position);
+            
         }
         else if(dragobj[0].estaArrast == false || dragobj[1].estaArrast == false || dragobj[2].estaArrast == false)
         {

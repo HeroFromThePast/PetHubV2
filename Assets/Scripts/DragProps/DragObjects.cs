@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class DragObjects : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class DragObjects : MonoBehaviour
     [SerializeField] ActualizarStats actualizar;
     [SerializeField] SonidosManager soundManager;
     private Vector3 posIni;
+
+    [SerializeField] TextMeshProUGUI textoTip;
+    [SerializeField] GameObject holderTip;
 
     private void Start()
     {
@@ -36,6 +40,8 @@ public class DragObjects : MonoBehaviour
             stats.SubirAlimentacion();
             actualizar.Actualizar();
             soundManager.Masticar();
+            holderTip.SetActive(true);
+            textoTip.text = "A tu perro puede gustarle pero el pollo no le hace bien, busca otra comida.";
 
         }else if (estaChocolate)
         {
@@ -44,14 +50,19 @@ public class DragObjects : MonoBehaviour
             stats.BajarSalud();
             actualizar.Actualizar();
             soundManager.Masticar();
+            holderTip.SetActive(true);
+            textoTip.text = "A tu perro le hace mucho daño el chocolate, no se lo vuelvas a dar.";
 
-        }else if (estaCuido)
+        }
+        else if (estaCuido)
         {
             prop.EntregarProp();
             stats.aumentoAl = 40;
             stats.SubirAlimentacion();
             actualizar.Actualizar();
             soundManager.Masticar();
+            holderTip.SetActive(true);
+            textoTip.text = "A tu perro le gusta y le hace bien el cuido, que se repita";
         }
         estaArrast = false;
         this.gameObject.transform.position = posIni;
