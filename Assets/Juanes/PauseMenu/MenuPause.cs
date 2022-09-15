@@ -10,6 +10,7 @@ public class MenuPause : MonoBehaviour
     [SerializeField] GameObject PauseButton;
     [SerializeField] GameObject Comedero;
     [SerializeField] GameObject ComederoDogo;
+    [SerializeField] GameObject PanelTienda;
 
     public void Paused()
     {
@@ -85,6 +86,17 @@ public class MenuPause : MonoBehaviour
         Application.Quit();
     }
 
+    public void TiendaOpen()
+    {
+        PanelTienda.SetActive(true);
+        Debug.Log("abriolatienda");
+
+    }
+    public void CloseTienda()
+    {
+        PanelTienda.SetActive(false);
+
+    }
 
 
 

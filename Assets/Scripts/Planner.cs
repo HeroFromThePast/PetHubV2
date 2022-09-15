@@ -25,7 +25,7 @@ public class Planner : MonoBehaviour
             AparecerBoton();
             contando = false;
         }
-        Debug.Log(timer);
+        //Debug.Log(timer);
     }
 
     public void AparecerBoton()    
