@@ -275,6 +275,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 289449687333495163, guid: a272cf0d290ac314b9b19889b1cd6e2d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 289449687466145007, guid: a272cf0d290ac314b9b19889b1cd6e2d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 289449688130727241, guid: a272cf0d290ac314b9b19889b1cd6e2d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 691662171}
+    - target: {fileID: 289449688130727241, guid: a272cf0d290ac314b9b19889b1cd6e2d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnContinue
+      objectReference: {fileID: 0}
+    - target: {fileID: 289449688703021871, guid: a272cf0d290ac314b9b19889b1cd6e2d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 691662171}
+    - target: {fileID: 289449688703021871, guid: a272cf0d290ac314b9b19889b1cd6e2d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: onAcceptContract
+      objectReference: {fileID: 0}
+    - target: {fileID: 289449688703021905, guid: a272cf0d290ac314b9b19889b1cd6e2d, type: 3}
+      propertyPath: m_Name
+      value: f
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370649484952984856, guid: a272cf0d290ac314b9b19889b1cd6e2d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3370649486027055514, guid: a272cf0d290ac314b9b19889b1cd6e2d, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -3230,7 +3262,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 691662171}
         m_TargetAssemblyTypeName: PantallasContrato, Assembly-CSharp
-        m_MethodName: OnContinue
+        m_MethodName: onAcceptContract
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

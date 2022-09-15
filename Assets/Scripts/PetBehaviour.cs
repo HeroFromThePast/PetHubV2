@@ -21,7 +21,8 @@ public class PetBehaviour : MonoBehaviour
 
     private void Awake()
     {
-        agent = GetComponent<NavMeshAgent>();           
+        agent = GetComponent<NavMeshAgent>();
+        
     }
     private void Start()
     {
@@ -30,6 +31,7 @@ public class PetBehaviour : MonoBehaviour
         //waypointIndex = Random.Range(0, waypoints.Length);
         UpdateDestination();
         animator.SetBool(condicion, false);
+        this.gameObject.transform.position = new Vector3(0, 0, 0);
     }
 
     private void Update()
