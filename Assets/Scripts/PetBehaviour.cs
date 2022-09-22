@@ -12,12 +12,13 @@ public class PetBehaviour : MonoBehaviour
     [SerializeField] int waypointIndex;
     [SerializeField] float stoppedTime = 0;
     Vector3 target;
-    [SerializeField] float timer;
+    float timer;
     [SerializeField] ManagerEscenarios managerEscenarios;
 
     [Header("Animacion")]
     [SerializeField] Animator animator;
     [SerializeField] string condicion;
+    [SerializeField] GameObject[] alertas;
 
     private void Awake()
     {
@@ -63,6 +64,23 @@ public class PetBehaviour : MonoBehaviour
             animator.SetBool(condicion, true);
         }
         else animator.SetBool(condicion, false);
+        
+
+        if (stats.salud <= 25)
+        {
+            alertas[0].SetActive(true);
+        }
+        else alertas[0].SetActive(false);
+        if (stats.alimentacion <= 25)
+        {
+            alertas[1].SetActive(true);
+        }
+        else alertas[1].SetActive(false);
+        if (stats.animo <= 25)
+        {
+            alertas[2].SetActive(true);
+        }
+        else alertas[2].SetActive(false);
     }
 
     
@@ -106,7 +124,7 @@ public class PetBehaviour : MonoBehaviour
                 }
                 while (waypointIndex == actualIndex);
             }
-
+            
             UpdateDestination();
             timer = 0;
         }

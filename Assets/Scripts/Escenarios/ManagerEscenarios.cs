@@ -1,21 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ManagerEscenarios : MonoBehaviour
 {
     [SerializeField] Eventos escP,escS,escT;
-    [SerializeField] Vector3[] posicionInicial;
-    [SerializeField] Vector3[] posicionJuego;
-    [SerializeField] GameObject[] escenarios;
     public int escenariosActual,escenarioNuevo;
-    [SerializeField] float tiempoDeCambio;
     [SerializeField] GameObject pollo, chocolate, cuido;
+    [SerializeField] cargarEscena cargarEscenas;
     void Start()
     {
-        //CambiarEscenario(Random.Range(0,3));
-        CambiaraPrimero();
-        tiempoDeCambio = 0;
         escP.GEvent += CambiaraPrimero;
         escS.GEvent += CambiaraSegundo;
         escT.GEvent += CambiaraTercero;
@@ -25,7 +20,7 @@ public class ManagerEscenarios : MonoBehaviour
     void CambiaraPrimero()
     {
         escenarioNuevo = 0;
-        CambiarEscenario(escenarioNuevo);
+        CambiarEscenario(escenarioNuevo, "Main");
         pollo.SetActive(true);
         chocolate.SetActive(true);
         cuido.SetActive(true);
@@ -34,7 +29,7 @@ public class ManagerEscenarios : MonoBehaviour
     {
        
         escenarioNuevo = 1;
-        CambiarEscenario(escenarioNuevo);
+        CambiarEscenario(escenarioNuevo, "Sala");
         pollo.SetActive(false);
         chocolate.SetActive(false);
         cuido.SetActive(false);
@@ -42,24 +37,16 @@ public class ManagerEscenarios : MonoBehaviour
     void CambiaraTercero()
     {
         escenarioNuevo = 2;
-        CambiarEscenario(escenarioNuevo);
+        CambiarEscenario(escenarioNuevo, "Patio");
         pollo.SetActive(false);
         chocolate.SetActive(false);
         cuido.SetActive(false);
     }
-    void CambiarEscenario(int escenarionuevo)
+    void CambiarEscenario(int escenarionuevo, string nombreEscenario)
     {
-        tiempoDeCambio = 2;
-        if (escenarionuevo != escenariosActual)
-        {
-            escenarios[escenariosActual].transform.LeanMoveLocal(posicionInicial[escenariosActual], tiempoDeCambio).setEaseOutQuart();
-            //LeanTween.move(escenarios[escenariosActual], posicionInicial[escenariosActual],tiempoDeCambio).setEaseOutQuart();
-            
-            escenarios[escenarionuevo].transform.LeanMoveLocal(posicionJuego[escenarionuevo], tiempoDeCambio).setEaseOutQuart();
-            //LeanTween.move(escenarios[escenarionuevo], posicionJuego, tiempoDeCambio).setEaseOutQuart();
-            
-            escenariosActual = escenarionuevo;
-        }
+        cargarEscenas.nombreEscena = nombreEscenario;
+        cargarEscenas.CargarEscena();
+
     }
     private void OnDestroy()
     {

@@ -1,0 +1,151 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5635560893680764769
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5635560893680764770}
+  - component: {fileID: 5635560893680764771}
+  - component: {fileID: 5635560893680764768}
+  - component: {fileID: 5635560893680764773}
+  - component: {fileID: 5635560893680764772}
+  - component: {fileID: 5635560893680764775}
+  - component: {fileID: 5635560893680764774}
+  - component: {fileID: 5635560893680764793}
+  m_Layer: 0
+  m_Name: 'Manager '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5635560893680764770
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5635560893680764769}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 390.43558, y: 213.47253, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5635560893680764771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5635560893680764769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fc1e47560173984e9b13d88946b1eb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  situaciones:
+  - {fileID: 11400000, guid: d96ee6eb3d3365342b6687736cf5b414, type: 2}
+  - {fileID: 11400000, guid: 267581807ed559f4ea1c5695713e96b5, type: 2}
+  - {fileID: 11400000, guid: bfc36cd6747d214438324ec48f7b1a25, type: 2}
+  recibirPedigree: {fileID: 11400000, guid: a7bb2367045a49249a4803a3bc6c0d63, type: 2}
+  recibirPollo: {fileID: 11400000, guid: 74d0c95e82975984293af42ea26aa622, type: 2}
+  recibirChocolate: {fileID: 11400000, guid: d661cf55493a0e145b3e653e99612207, type: 2}
+  alterarStats: {fileID: 11400000, guid: 3a6fef7f673048841902c4de8b19ccac, type: 2}
+  actualizarStats: {fileID: 11400000, guid: 0ecad5114bf09224e973e0a54d2f17bf, type: 2}
+  mascota: {fileID: 0}
+--- !u!114 &5635560893680764768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5635560893680764769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af3af011251cca04892f02dab184f7fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  salud: {fileID: 0}
+  alimentacion: {fileID: 0}
+  animo: {fileID: 0}
+  stats: {fileID: 0}
+  actualizar: {fileID: 11400000, guid: 0ecad5114bf09224e973e0a54d2f17bf, type: 2}
+--- !u!114 &5635560893680764773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5635560893680764769}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8a12e9f1f8f19a4fb7f7d2ebd8b6c0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  e1: {fileID: 11400000, guid: 8d3f60ebb7fd8e848b89e4b612435e20, type: 2}
+  e2: {fileID: 11400000, guid: da77624d8bb7af74f858a79acbc1cbcc, type: 2}
+--- !u!114 &5635560893680764772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5635560893680764769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4b5049db98025c4f8efd417f069d2ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  escP: {fileID: 11400000, guid: a21a7a9d17204b245aefd521455ffd26, type: 2}
+  escS: {fileID: 11400000, guid: c862711c9403d8642bcd03fa08c71df4, type: 2}
+  escT: {fileID: 11400000, guid: c2743de119c563347b5b643e3365f220, type: 2}
+  escenariosActual: 1
+  escenarioNuevo: 0
+  pollo: {fileID: 0}
+  chocolate: {fileID: 0}
+  cuido: {fileID: 0}
+  cargarEscenas: {fileID: 5635560893680764793}
+--- !u!114 &5635560893680764775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5635560893680764769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d78623ef91c57f5458694e50125a4603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5635560893680764774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5635560893680764769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dd928ef7867eab40a54a880738fb44b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5635560893680764793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5635560893680764769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bff1baea31e985f449c85e9c0271690f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nombreEscena: 
