@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Patio.unity
     guid: c3eb5014ef0641c438be3ec52a56e612
+  - enabled: 1
+    path: Assets/Juanes/UI_iconos/intentemos.unity
+    guid: 15f0eb9067069df4292e439084066f69
+  - enabled: 1
+    path: Assets/Juanes/UI_iconos/Effect.unity
+    guid: 1ddce2ff093e2aa4c9282b815fc39d8f
   m_configObjects: {}
