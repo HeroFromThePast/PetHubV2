@@ -22,7 +22,7 @@ public class transicionEscenas : MonoBehaviour
     {
         animator.SetTrigger("Iniciar");
         yield return new WaitForSeconds(animacionFinal.length);
-        SceneManager.LoadScene("intentemos");
+        SceneManager.LoadScene("Patio");
     }
 
     public void BotonCambiarEscena2()
@@ -34,6 +34,17 @@ public class transicionEscenas : MonoBehaviour
     {
         animator.SetTrigger("Iniciar");
         yield return new WaitForSeconds(animacionFinal.length);
-        SceneManager.LoadScene("Effect");
+        SceneManager.LoadScene("Main");
+    }
+    public void BotonCambiarEscena3()
+    {
+        StartCoroutine(CambiarEscena3());
+    }
+
+    IEnumerator CambiarEscena3()
+    {
+        animator.SetTrigger("Iniciar");
+        yield return new WaitForSeconds(animacionFinal.length);
+        SceneManager.LoadScene("Sala");
     }
 }
