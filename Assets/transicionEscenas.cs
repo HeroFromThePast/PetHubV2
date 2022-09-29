@@ -13,7 +13,7 @@ public class transicionEscenas : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    public void BotonCambiarEscena()
+    public void Patio()
     {
         StartCoroutine(CambiarEscena());
     }
@@ -25,7 +25,7 @@ public class transicionEscenas : MonoBehaviour
         SceneManager.LoadScene("Patio");
     }
 
-    public void BotonCambiarEscena2()
+    public void Main()
     {
         StartCoroutine(CambiarEscena2());
     }
@@ -36,7 +36,7 @@ public class transicionEscenas : MonoBehaviour
         yield return new WaitForSeconds(animacionFinal.length);
         SceneManager.LoadScene("Main");
     }
-    public void BotonCambiarEscena3()
+    public void Sala()
     {
         StartCoroutine(CambiarEscena3());
     }

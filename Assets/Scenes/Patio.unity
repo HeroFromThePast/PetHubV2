@@ -4373,7 +4373,7 @@ PrefabInstance:
       objectReference: {fileID: 21509087}
     - target: {fileID: 6692468187439872904, guid: fba009ae70307e3459aa0657606e9cce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: BotonCambiarEscena
+      value: Main
       objectReference: {fileID: 0}
     - target: {fileID: 6692468187439872904, guid: fba009ae70307e3459aa0657606e9cce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -4393,7 +4393,7 @@ PrefabInstance:
       objectReference: {fileID: 21509087}
     - target: {fileID: 6692468187531848815, guid: fba009ae70307e3459aa0657606e9cce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: BotonCambiarEscena2
+      value: Patio
       objectReference: {fileID: 0}
     - target: {fileID: 6692468187531848815, guid: fba009ae70307e3459aa0657606e9cce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -4497,7 +4497,7 @@ PrefabInstance:
       objectReference: {fileID: 21509087}
     - target: {fileID: 6692468187644969535, guid: fba009ae70307e3459aa0657606e9cce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: BotonCambiarEscena3
+      value: Sala
       objectReference: {fileID: 0}
     - target: {fileID: 6692468187644969535, guid: fba009ae70307e3459aa0657606e9cce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
