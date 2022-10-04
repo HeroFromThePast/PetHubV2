@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 public class PetBehaviour : MonoBehaviour
 {
     [SerializeField] Estadisticas stats;
@@ -97,7 +98,7 @@ public class PetBehaviour : MonoBehaviour
         actualIndex = waypointIndex;
         if(timer >= stoppedTime)
         {
-            if (managerEscenarios.escenariosActual == 0)
+            if (SceneManager.GetActiveScene().name == "Main")
             {
                 waypointIndex = Random.Range(0, 6);
                 do
@@ -106,7 +107,7 @@ public class PetBehaviour : MonoBehaviour
                 }
                 while (waypointIndex == actualIndex);
             }
-            else if (managerEscenarios.escenariosActual == 1)
+            else if (SceneManager.GetActiveScene().name == "Sala")
             {
                 waypointIndex = Random.Range(5, 11);
                 do
@@ -115,7 +116,7 @@ public class PetBehaviour : MonoBehaviour
                 }
                 while (waypointIndex == actualIndex);
             }
-            else if (managerEscenarios.escenariosActual == 2)
+            else if (SceneManager.GetActiveScene().name == "Patio")
             {
                 waypointIndex = Random.Range(10, 16);
                 do
