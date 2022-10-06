@@ -775,53 +775,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2f13db45e5046d448d74bed26198651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1052360680
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1052360682}
-  - component: {fileID: 1052360681}
-  m_Layer: 0
-  m_Name: GuardarStatsEntreEscenas
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1052360681
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1052360680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65458dfdcd35e1547845d53106b6f13a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  salud: 0
-  animo: 0
-  alimentacion: 0
---- !u!4 &1052360682
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1052360680}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.059826374, y: 0.6390383, z: 0.3376205}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 20
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1096076990
 GameObject:
   m_ObjectHideFlags: 0
@@ -3843,7 +3796,7 @@ PrefabInstance:
     - target: {fileID: 6692468187439872904, guid: fba009ae70307e3459aa0657606e9cce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 1052360681}
+      objectReference: {fileID: 1822635126}
     - target: {fileID: 6692468187439872904, guid: fba009ae70307e3459aa0657606e9cce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
@@ -3854,7 +3807,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6692468187439872904, guid: fba009ae70307e3459aa0657606e9cce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: GuardarStats
+      value: GuardarDatos
       objectReference: {fileID: 0}
     - target: {fileID: 6692468187439872904, guid: fba009ae70307e3459aa0657606e9cce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -3862,7 +3815,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6692468187439872904, guid: fba009ae70307e3459aa0657606e9cce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: DatosEntreEscenas, Assembly-CSharp
+      value: Estadisticas, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6692468187439872904, guid: fba009ae70307e3459aa0657606e9cce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -3895,7 +3848,7 @@ PrefabInstance:
     - target: {fileID: 6692468187531848815, guid: fba009ae70307e3459aa0657606e9cce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 1052360681}
+      objectReference: {fileID: 1822635126}
     - target: {fileID: 6692468187531848815, guid: fba009ae70307e3459aa0657606e9cce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
@@ -3906,7 +3859,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6692468187531848815, guid: fba009ae70307e3459aa0657606e9cce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: GuardarStats
+      value: GuardarDatos
       objectReference: {fileID: 0}
     - target: {fileID: 6692468187531848815, guid: fba009ae70307e3459aa0657606e9cce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -3914,7 +3867,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6692468187531848815, guid: fba009ae70307e3459aa0657606e9cce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: DatosEntreEscenas, Assembly-CSharp
+      value: Estadisticas, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6692468187531848815, guid: fba009ae70307e3459aa0657606e9cce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -4027,7 +3980,7 @@ PrefabInstance:
     - target: {fileID: 6692468187644969535, guid: fba009ae70307e3459aa0657606e9cce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 1052360681}
+      objectReference: {fileID: 1822635126}
     - target: {fileID: 6692468187644969535, guid: fba009ae70307e3459aa0657606e9cce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
@@ -4038,7 +3991,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6692468187644969535, guid: fba009ae70307e3459aa0657606e9cce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: GuardarStats
+      value: GuardarDatos
       objectReference: {fileID: 0}
     - target: {fileID: 6692468187644969535, guid: fba009ae70307e3459aa0657606e9cce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -4046,7 +3999,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6692468187644969535, guid: fba009ae70307e3459aa0657606e9cce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: DatosEntreEscenas, Assembly-CSharp
+      value: Estadisticas, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6692468187644969535, guid: fba009ae70307e3459aa0657606e9cce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName

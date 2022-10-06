@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Estadisticas : MonoBehaviour
 {
+    private bool seUso = false;
+    [SerializeField] ActualizarStats actualizar;
     static Estadisticas instance;
     public static Estadisticas Instance
     {
@@ -25,7 +27,15 @@ public class Estadisticas : MonoBehaviour
         bajarA.GEvent += BajarAnimo;
         bajarAl.GEvent += BajarAlimentacion;
         bajarS.GEvent += BajarSalud;
+
+        if (salud != PlayerPrefs.GetFloat("Salud") || alimentacion != PlayerPrefs.GetFloat("Alimentacion") || animo != PlayerPrefs.GetFloat("Animo") && seUso)
+        {
+            CargarDatos();
+            actualizar.Actualizar();
+            AlterarStats();
+        }
     }
+
     void AlterarStats()
     {
         SubirSalud();
@@ -95,5 +105,20 @@ public class Estadisticas : MonoBehaviour
         bajarA.GEvent -= BajarAnimo;
         bajarAl.GEvent -= BajarAlimentacion;
         bajarS.GEvent -= BajarSalud;
+    }
+
+    public void GuardarDatos()
+    {
+        PlayerPrefs.SetFloat("Salud", salud);
+        PlayerPrefs.SetFloat("Animo", animo);
+        PlayerPrefs.SetFloat("Alimentacion", alimentacion);
+        seUso = true;
+    }
+
+    private void CargarDatos()
+    {
+        salud = PlayerPrefs.GetFloat("Salud");
+        animo = PlayerPrefs.GetFloat("Animo");
+        alimentacion = PlayerPrefs.GetFloat("Alimentacion");
     }
 }
