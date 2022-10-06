@@ -42,6 +42,7 @@ public class Estadisticas : MonoBehaviour
         {
             salud = 100;
         }
+      
     }
     public void SubirAlimentacion()
     {
@@ -50,6 +51,7 @@ public class Estadisticas : MonoBehaviour
         {
             alimentacion = 100;
         }
+       
     }
     public void SubirAnimo()
     {
@@ -58,29 +60,30 @@ public class Estadisticas : MonoBehaviour
         {
             animo = 100;
         }
+
     }
     public void BajarSalud()
     {
         salud -= disminucionS;
-        if (salud < 1)
+        if (salud < 10)
         {
-            salud = 1;
+            salud = 10;
         }
     }
     public void BajarAlimentacion()
     {
         alimentacion -= disminucionAl;
-        if (alimentacion < 1)
+        if (alimentacion < 10)
         {
-            alimentacion = 1;
+            alimentacion = 10;
         }
     }
     public void BajarAnimo()
     {
         animo -= disminucionA;
-        if (animo < 1)
+        if (animo < 10)
         {
-            animo = 1;
+            animo = 10;
         }
     }
     private void OnDestroy()
