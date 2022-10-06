@@ -178,13 +178,13 @@ public class ControllerBotonesAgenda : MonoBehaviour
     public void OpenNewTarea()
     {
         panelNewTare.SetActive(true);
-      
+
     }
 
     public void CloseNewTarea()
     {
         panelNewTare.SetActive(false);
-        
+
     }
 
     public void BackToMain()
