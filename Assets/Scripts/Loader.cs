@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 public class Loader : MonoBehaviour
 {
     public Animator anim;
-    public string escenaSiguiente;
-    public bool verificarTutorial;
     float timer = 0;
     private void Update()
     {
@@ -20,29 +18,12 @@ public class Loader : MonoBehaviour
     }
     public void LoadScene()
     {
-        if (verificarTutorial == true)
-        {
-            if (PlayerPrefs.GetInt("PrimeraVez") == 0)
-            {
-                StartCoroutine(Load("Tutorial"));
-                //PlayerPrefs.SetInt("PrimeraVez", 1);
-            }
-            else
-            {
-                StartCoroutine(Load(escenaSiguiente));
-            }
-        }
-        else
-        {
-            StartCoroutine(Load(escenaSiguiente));
-        }
-        
-        
+        StartCoroutine(Load(SceneManager.GetActiveScene().buildIndex + 1));
     }
-    IEnumerator Load(string escena)
+    IEnumerator Load(int index)
     {
         anim.SetTrigger("start");
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene(escena);
+        SceneManager.LoadScene(index);
     }
 }
