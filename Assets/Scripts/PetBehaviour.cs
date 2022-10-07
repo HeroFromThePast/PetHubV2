@@ -64,7 +64,7 @@ public class PetBehaviour : MonoBehaviour
         {
             animator.SetBool(condicion, true);
         }
-        else animator.SetBool(condicion, false);
+        //else animator.SetBool(condicion, false);
         
 
         if (stats.salud <= 25)

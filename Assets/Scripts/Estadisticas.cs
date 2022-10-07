@@ -13,6 +13,7 @@ public class Estadisticas : MonoBehaviour
     
     [SerializeField] Eventos alterarStats,subirA,subirAl,subirS,bajarA,bajarAl,bajarS;
     public float aumentoS,aumentoAl,aumentoA,disminucionS, disminucionAl, disminucionA;
+    [SerializeField] ActualizarStats actualizar;
 
     private void Start()
     {
@@ -25,6 +26,12 @@ public class Estadisticas : MonoBehaviour
         bajarA.GEvent += BajarAnimo;
         bajarAl.GEvent += BajarAlimentacion;
         bajarS.GEvent += BajarSalud;
+
+        if (salud != PlayerPrefs.GetFloat("Salud") || animo != PlayerPrefs.GetFloat("Animo") || alimentacion != PlayerPrefs.GetFloat("Alimentacion"))
+        {
+            CargarStats();
+            actualizar.Actualizar();
+        }
     }
     void AlterarStats()
     {
@@ -62,25 +69,25 @@ public class Estadisticas : MonoBehaviour
     public void BajarSalud()
     {
         salud -= disminucionS;
-        if (salud < 1)
+        if (salud < 10)
         {
-            salud = 1;
+            salud = 10;
         }
     }
     public void BajarAlimentacion()
     {
         alimentacion -= disminucionAl;
-        if (alimentacion < 1)
+        if (alimentacion < 10)
         {
-            alimentacion = 1;
+            alimentacion = 10;
         }
     }
     public void BajarAnimo()
     {
         animo -= disminucionA;
-        if (animo < 1)
+        if (animo < 10)
         {
-            animo = 1;
+            animo = 10;
         }
     }
     private void OnDestroy()
@@ -92,5 +99,19 @@ public class Estadisticas : MonoBehaviour
         bajarA.GEvent -= BajarAnimo;
         bajarAl.GEvent -= BajarAlimentacion;
         bajarS.GEvent -= BajarSalud;
+    }
+
+    public void GuardarStats()
+    {
+        PlayerPrefs.SetFloat("Salud", salud);
+        PlayerPrefs.SetFloat("Animo", animo);
+        PlayerPrefs.SetFloat("Alimentacion", alimentacion);
+    }
+
+    private void CargarStats()
+    {
+        salud = PlayerPrefs.GetFloat("Salud");
+        animo = PlayerPrefs.GetFloat("Animo");
+        alimentacion = PlayerPrefs.GetFloat("Alimentacion");
     }
 }

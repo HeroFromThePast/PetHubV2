@@ -291,7 +291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   estaArrast: 0
-  stats: {fileID: 1822635126}
+  stats: {fileID: 1769290304}
   prop: {fileID: 254017047}
   actualizar: {fileID: 1267181865}
   soundManager: {fileID: 1988323252}
@@ -659,9 +659,17 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[15]
       value: 
       objectReference: {fileID: 7335852343534208294}
+    - target: {fileID: 2039274433, guid: 14ea0b8781bbce048a49b42b206b7b0f, type: 3}
+      propertyPath: actualizar
+      value: 
+      objectReference: {fileID: 1267181865}
     - target: {fileID: 3806831148473169338, guid: 14ea0b8781bbce048a49b42b206b7b0f, type: 3}
       propertyPath: m_Name
       value: Corgi
+      objectReference: {fileID: 0}
+    - target: {fileID: 3806831148473169338, guid: 14ea0b8781bbce048a49b42b206b7b0f, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4584458185159667456, guid: 14ea0b8781bbce048a49b42b206b7b0f, type: 3}
       propertyPath: m_RootOrder
@@ -773,7 +781,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   estaArrast: 0
-  stats: {fileID: 1822635126}
+  stats: {fileID: 1769290304}
   prop: {fileID: 888470474}
   actualizar: {fileID: 1267181865}
   soundManager: {fileID: 1988323252}
@@ -1165,7 +1173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5727448962a63947b35460c8d9898fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats: {fileID: 1822635126}
+  stats: {fileID: 1769290304}
 --- !u!114 &1267181877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1179,7 +1187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actualizar: {fileID: 1267181865}
-  stats: {fileID: 1822635126}
+  stats: {fileID: 1769290304}
 --- !u!114 &1267181878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1193,7 +1201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actualizar: {fileID: 1267181865}
-  stats: {fileID: 1822635126}
+  stats: {fileID: 1769290304}
 --- !u!1001 &1310770648
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1319,7 +1327,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   estaArrast: 0
-  stats: {fileID: 1822635126}
+  stats: {fileID: 1769290304}
   prop: {fileID: 1411472498}
   actualizar: {fileID: 1267181865}
   soundManager: {fileID: 1988323252}
@@ -24189,6 +24197,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1769290304}
+        m_TargetAssemblyTypeName: Estadisticas, Assembly-CSharp
+        m_MethodName: GuardarStats
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4437253462396255192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24391,6 +24411,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1040406546}
         m_TargetAssemblyTypeName: transicionEscenas, Assembly-CSharp
         m_MethodName: Main
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1769290304}
+        m_TargetAssemblyTypeName: Estadisticas, Assembly-CSharp
+        m_MethodName: GuardarStats
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -25083,6 +25115,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1040406546}
         m_TargetAssemblyTypeName: transicionEscenas, Assembly-CSharp
         m_MethodName: Patio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1769290304}
+        m_TargetAssemblyTypeName: Estadisticas, Assembly-CSharp
+        m_MethodName: GuardarStats
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -27082,17 +27126,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5612430237152362553 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6692468186891179867, guid: fba009ae70307e3459aa0657606e9cce, type: 3}
-  m_PrefabInstance: {fileID: 1225884868632680290}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5612430237772885306 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6692468187515959896, guid: fba009ae70307e3459aa0657606e9cce, type: 3}
@@ -27101,28 +27134,6 @@ GameObject:
 --- !u!114 &5612430238026032381 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6692468187764847519, guid: fba009ae70307e3459aa0657606e9cce, type: 3}
-  m_PrefabInstance: {fileID: 1225884868632680290}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &5612430238135787207 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6692468187807484325, guid: fba009ae70307e3459aa0657606e9cce, type: 3}
-  m_PrefabInstance: {fileID: 1225884868632680290}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &5612430238462758010 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6692468188134464280, guid: fba009ae70307e3459aa0657606e9cce, type: 3}
   m_PrefabInstance: {fileID: 1225884868632680290}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -27141,19 +27152,19 @@ PrefabInstance:
     - target: {fileID: 5635560893680764768, guid: 4085660e73344594d8b738f91ce36ff5, type: 3}
       propertyPath: animo
       value: 
-      objectReference: {fileID: 5612430237152362553}
+      objectReference: {fileID: 7967809148211299825}
     - target: {fileID: 5635560893680764768, guid: 4085660e73344594d8b738f91ce36ff5, type: 3}
       propertyPath: salud
       value: 
-      objectReference: {fileID: 5612430238135787207}
+      objectReference: {fileID: 7967809146873464274}
     - target: {fileID: 5635560893680764768, guid: 4085660e73344594d8b738f91ce36ff5, type: 3}
       propertyPath: stats
       value: 
-      objectReference: {fileID: 1822635126}
+      objectReference: {fileID: 1769290304}
     - target: {fileID: 5635560893680764768, guid: 4085660e73344594d8b738f91ce36ff5, type: 3}
       propertyPath: alimentacion
       value: 
-      objectReference: {fileID: 5612430238462758010}
+      objectReference: {fileID: 7967809147802758334}
     - target: {fileID: 5635560893680764769, guid: 4085660e73344594d8b738f91ce36ff5, type: 3}
       propertyPath: m_Name
       value: 'Manager '
@@ -43011,7 +43022,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7967809147802758332}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -43021,7 +43032,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 142.9375, y: -0.15649414}
+  m_AnchoredPosition: {x: 142.9375, y: -0.15661621}
   m_SizeDelta: {x: 4.125, y: -80.31299}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &7967809147918323328

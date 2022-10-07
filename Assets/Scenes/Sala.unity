@@ -315,10 +315,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   estaArrast: 0
-  stats: {fileID: 0}
+  stats: {fileID: 1995755272}
   prop: {fileID: 159315617}
-  actualizar: {fileID: 0}
-  soundManager: {fileID: 0}
+  actualizar: {fileID: 5635560894628589131}
+  soundManager: {fileID: 1988323252}
   textoTip: {fileID: 0}
   holderTip: {fileID: 0}
   holderAlertaC: {fileID: 0}
@@ -474,10 +474,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   estaArrast: 0
-  stats: {fileID: 0}
+  stats: {fileID: 1995755272}
   prop: {fileID: 297433248}
-  actualizar: {fileID: 0}
-  soundManager: {fileID: 0}
+  actualizar: {fileID: 5635560894628589131}
+  soundManager: {fileID: 1988323252}
   textoTip: {fileID: 0}
   holderTip: {fileID: 0}
   holderAlertaC: {fileID: 0}
@@ -805,6 +805,7 @@ MonoBehaviour:
   disminucionS: 0
   disminucionAl: 0
   disminucionA: 0
+  actualizar: {fileID: 0}
 --- !u!195 &459251285
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2965,10 +2966,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   estaArrast: 0
-  stats: {fileID: 0}
+  stats: {fileID: 1995755272}
   prop: {fileID: 1435108053}
-  actualizar: {fileID: 0}
-  soundManager: {fileID: 0}
+  actualizar: {fileID: 5635560894628589131}
+  soundManager: {fileID: 1988323252}
   textoTip: {fileID: 0}
   holderTip: {fileID: 0}
   holderAlertaC: {fileID: 0}
@@ -4078,6 +4079,10 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[15]
       value: 
       objectReference: {fileID: 7335852343534208294}
+    - target: {fileID: 2039274433, guid: 14ea0b8781bbce048a49b42b206b7b0f, type: 3}
+      propertyPath: actualizar
+      value: 
+      objectReference: {fileID: 5635560894628589131}
     - target: {fileID: 3806831148473169338, guid: 14ea0b8781bbce048a49b42b206b7b0f, type: 3}
       propertyPath: m_Name
       value: Corgi
@@ -6810,6 +6815,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1995755272}
+        m_TargetAssemblyTypeName: Estadisticas, Assembly-CSharp
+        m_MethodName: GuardarStats
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &1869611880854507104
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6933,6 +6950,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2043430900}
         m_TargetAssemblyTypeName: transicionEscenas, Assembly-CSharp
         m_MethodName: Patio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1995755272}
+        m_TargetAssemblyTypeName: Estadisticas, Assembly-CSharp
+        m_MethodName: GuardarStats
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7704,6 +7733,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2043430900}
         m_TargetAssemblyTypeName: transicionEscenas, Assembly-CSharp
         m_MethodName: Sala
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1995755272}
+        m_TargetAssemblyTypeName: Estadisticas, Assembly-CSharp
+        m_MethodName: GuardarStats
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13542,39 +13583,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5612430237152362553 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6692468186891179867, guid: fba009ae70307e3459aa0657606e9cce, type: 3}
-  m_PrefabInstance: {fileID: 1225884868632680290}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &5612430238135787207 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6692468187807484325, guid: fba009ae70307e3459aa0657606e9cce, type: 3}
-  m_PrefabInstance: {fileID: 1225884868632680290}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &5612430238462758010 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6692468188134464280, guid: fba009ae70307e3459aa0657606e9cce, type: 3}
-  m_PrefabInstance: {fileID: 1225884868632680290}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &5635560894628589129
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13585,19 +13593,19 @@ PrefabInstance:
     - target: {fileID: 5635560893680764768, guid: 4085660e73344594d8b738f91ce36ff5, type: 3}
       propertyPath: animo
       value: 
-      objectReference: {fileID: 5612430237152362553}
+      objectReference: {fileID: 7372180148909140373}
     - target: {fileID: 5635560893680764768, guid: 4085660e73344594d8b738f91ce36ff5, type: 3}
       propertyPath: salud
       value: 
-      objectReference: {fileID: 5612430238135787207}
+      objectReference: {fileID: 7372180149704599990}
     - target: {fileID: 5635560893680764768, guid: 4085660e73344594d8b738f91ce36ff5, type: 3}
       propertyPath: stats
       value: 
-      objectReference: {fileID: 1822635126}
+      objectReference: {fileID: 1995755272}
     - target: {fileID: 5635560893680764768, guid: 4085660e73344594d8b738f91ce36ff5, type: 3}
       propertyPath: alimentacion
       value: 
-      objectReference: {fileID: 5612430238462758010}
+      objectReference: {fileID: 7372180148745945306}
     - target: {fileID: 5635560893680764769, guid: 4085660e73344594d8b738f91ce36ff5, type: 3}
       propertyPath: m_Name
       value: 'Manager '
@@ -13653,15 +13661,15 @@ PrefabInstance:
     - target: {fileID: 5635560893680764772, guid: 4085660e73344594d8b738f91ce36ff5, type: 3}
       propertyPath: cuido
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 159315616}
     - target: {fileID: 5635560893680764772, guid: 4085660e73344594d8b738f91ce36ff5, type: 3}
       propertyPath: pollo
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1435108052}
     - target: {fileID: 5635560893680764772, guid: 4085660e73344594d8b738f91ce36ff5, type: 3}
       propertyPath: chocolate
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 297433247}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4085660e73344594d8b738f91ce36ff5, type: 3}
 --- !u!1 &5635560894628589130 stripped
@@ -13693,7 +13701,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actualizar: {fileID: 5635560894628589131}
-  stats: {fileID: 1822635126}
+  stats: {fileID: 1995755272}
 --- !u!114 &5635560894628589133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13707,7 +13715,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actualizar: {fileID: 5635560894628589131}
-  stats: {fileID: 1822635126}
+  stats: {fileID: 1995755272}
 --- !u!114 &5635560894628589134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13720,7 +13728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5727448962a63947b35460c8d9898fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats: {fileID: 1822635126}
+  stats: {fileID: 1995755272}
 --- !u!1 &6018135216314834898
 GameObject:
   m_ObjectHideFlags: 0

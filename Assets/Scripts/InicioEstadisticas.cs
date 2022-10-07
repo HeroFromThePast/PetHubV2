@@ -19,7 +19,7 @@ public class InicioEstadisticas : MonoBehaviour
             diferencia = DateTime.Now - tiempo;
             Debug.Log(diferencia.Minutes);
             
-            if(diferencia.Minutes > 5)
+            if(diferencia.Minutes >= 5)
             {
                 valorMinutos = diferencia.Minutes / 5;
                 stats.disminucionA = 10 * valorMinutos;
@@ -43,6 +43,5 @@ public class InicioEstadisticas : MonoBehaviour
     public static void GuardarFecha()
     {
         PlayerPrefs.SetString("TiempoUltimo", DateTime.Now.ToString());
-
     }
 }
