@@ -976,18 +976,22 @@ PrefabInstance:
     - target: {fileID: 5912120848748635382, guid: da8266890ea36824d8b803788f102c94, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 912267544}
+      objectReference: {fileID: 993363317}
     - target: {fileID: 5912120848748635382, guid: da8266890ea36824d8b803788f102c94, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5912120848748635382, guid: da8266890ea36824d8b803788f102c94, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CargarPatio
+      value: Patio
       objectReference: {fileID: 0}
     - target: {fileID: 5912120848748635382, guid: da8266890ea36824d8b803788f102c94, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5912120848748635382, guid: da8266890ea36824d8b803788f102c94, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: transicionEscenas, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5912120848748635382, guid: da8266890ea36824d8b803788f102c94, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -1008,18 +1012,22 @@ PrefabInstance:
     - target: {fileID: 5912120849205226385, guid: da8266890ea36824d8b803788f102c94, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 912267544}
+      objectReference: {fileID: 993363317}
     - target: {fileID: 5912120849205226385, guid: da8266890ea36824d8b803788f102c94, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5912120849205226385, guid: da8266890ea36824d8b803788f102c94, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CargarMain
+      value: Main
       objectReference: {fileID: 0}
     - target: {fileID: 5912120849205226385, guid: da8266890ea36824d8b803788f102c94, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5912120849205226385, guid: da8266890ea36824d8b803788f102c94, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: transicionEscenas, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5912120849205226385, guid: da8266890ea36824d8b803788f102c94, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -1040,18 +1048,22 @@ PrefabInstance:
     - target: {fileID: 5912120850006155507, guid: da8266890ea36824d8b803788f102c94, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 912267544}
+      objectReference: {fileID: 993363317}
     - target: {fileID: 5912120850006155507, guid: da8266890ea36824d8b803788f102c94, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5912120850006155507, guid: da8266890ea36824d8b803788f102c94, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CargarSala
+      value: Sala
       objectReference: {fileID: 0}
     - target: {fileID: 5912120850006155507, guid: da8266890ea36824d8b803788f102c94, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5912120850006155507, guid: da8266890ea36824d8b803788f102c94, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: transicionEscenas, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5912120850006155507, guid: da8266890ea36824d8b803788f102c94, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -4926,7 +4938,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7435993218312253578, guid: 88802b63c18c5bf40bf2ae2a9256da85, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88802b63c18c5bf40bf2ae2a9256da85, type: 3}

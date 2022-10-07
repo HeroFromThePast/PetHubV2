@@ -45,12 +45,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Menu: {fileID: 0}
-  Settings: {fileID: 3133806025228415032, guid: 729ed4ab616201d41837335563180417, type: 3}
-  Credits: {fileID: 637152557605690008, guid: f960764d36e207c4c8791c617adb24de, type: 3}
+  Settings: {fileID: 0}
+  Credits: {fileID: 0}
   Salir: {fileID: 0}
   monedas: {fileID: 0}
   ButtonMenu: {fileID: 0}
   Info: {fileID: 0}
   Tips: {fileID: 0}
   Etiquetas: {fileID: 0}
-  Store: {fileID: 64604426110341312, guid: 432c83a46f8ff3548a91a99df35e82c8, type: 3}
+  Store: {fileID: 0}
