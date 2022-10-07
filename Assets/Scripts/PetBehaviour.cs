@@ -20,7 +20,6 @@ public class PetBehaviour : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] string condicion;
     [SerializeField] GameObject[] alertas;
-    [SerializeField] Scene main;
 
     private void Awake()
     {
@@ -54,9 +53,9 @@ public class PetBehaviour : MonoBehaviour
         else if (dragobj[0].estaArrast == true || dragobj[1].estaArrast == true || dragobj[2].estaArrast == true)
         {
             agent.SetDestination(waypoints[15].position);
-
+            
         }
-        else if (dragobj[0].estaArrast == false || dragobj[1].estaArrast == false || dragobj[2].estaArrast == false)
+        else if(dragobj[0].estaArrast == false || dragobj[1].estaArrast == false || dragobj[2].estaArrast == false)
         {
             UpdateIndex();
         }

@@ -32,4 +32,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Juanes/UI_iconos/Effect.unity
     guid: 1ddce2ff093e2aa4c9282b815fc39d8f
+  - enabled: 1
+    path: Assets/Scenes/Agenda.unity
+    guid: a3cae6fadb486e34fbfcf0451ad6b4ba
+  - enabled: 1
+    path: Assets/Scenes/Plato-Main.unity
+    guid: f845af8640ec3f24aaa912d197b147e0
+  - enabled: 1
+    path: Assets/Scenes/comedero.unity
+    guid: 8c296ca8cbed5c945b2f9a758aa08206
   m_configObjects: {}
