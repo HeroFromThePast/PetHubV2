@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class ControllerCanvasUI : MonoBehaviour
 {
-    public GameObject Menu,Tienda,Settings,Credits,Salir,monedas, ButtonMenu, Info,Tips,Etiquetas,Store;
+    public GameObject Menu,Settings,Credits,Salir,monedas, ButtonMenu, Info,Tips,Etiquetas,Store;
     private float waitTime = 2.0f;
     private float timer = 0.0f;
     public void SettingsOn()
@@ -109,13 +109,13 @@ public class ControllerCanvasUI : MonoBehaviour
     { 
         Time.timeScale = 0f;
         Store.SetActive(true);
-        ButtonMenu.SetActive(false);
+        //ButtonMenu.SetActive(false);
     }
     public void CloseTienda()
     {
         Time.timeScale = 1f;
         Store.SetActive(false);
-        ButtonMenu.SetActive(true);
+        //al ButtonMenu.SetActive(true);
     }
 
     public void QuitGame()
@@ -131,5 +131,20 @@ public class ControllerCanvasUI : MonoBehaviour
     public void OpenCoca()
     {
         SceneManager.LoadScene("Plato-Main");
+    }
+
+    public void CargarSala()
+    {
+        SceneManager.LoadScene("Sala");
+    }
+
+    public void CargarPatio()
+    {
+        SceneManager.LoadScene("Patio");
+    }
+
+    public void CargarMain()
+    {
+        SceneManager.LoadScene("Main");
     }
 }

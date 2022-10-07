@@ -10,17 +10,21 @@ public class ArrastrarBotonesEscenario : MonoBehaviour
 
     void Start()
     {
+        transform.localScale = Vector2.zero;
         transform.localPosition = posicionInicial;
+        //transform.localPosition = posicionInicial;
         aparicion.GEvent += ArrastrarBoton;
         desaparicion.GEvent += DesaparecerBoton;
     }
 
     void ArrastrarBoton()
     {
+        transform.LeanScale(Vector2.one, aparicionBoton).setEaseOutQuart();
         transform.LeanMoveLocal(posicionNueva, aparicionBoton).setEaseOutQuart();
     }
     void DesaparecerBoton()
     {
+        transform.LeanScale(Vector2.zero, aparicionBoton).setEaseOutQuart();
         transform.LeanMoveLocal(posicionInicial, aparicionBoton).setEaseOutQuart();
     }
     private void OnDestroy()

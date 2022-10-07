@@ -14,7 +14,7 @@ public class ControllerBotonesScenaPlato : MonoBehaviour
 
     public void BackToMain()
     {
-        SceneManager.LoadScene("Menu Principal");
+        SceneManager.LoadScene("Main");
     }
 
     public void OpenpanelAgregar()

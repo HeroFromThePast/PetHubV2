@@ -189,6 +189,6 @@ public class ControllerBotonesAgenda : MonoBehaviour
 
     public void BackToMain()
     {
-        SceneManager.LoadScene("Menu Principal");
+        SceneManager.LoadScene("Main");
     }
 }
