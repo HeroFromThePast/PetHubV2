@@ -13,7 +13,7 @@ public class PetBehaviour : MonoBehaviour
     [SerializeField] int waypointIndex;
     [SerializeField] float stoppedTime = 0;
     Vector3 target;
-    float timer;
+    [SerializeField] float timer;
     [SerializeField] ManagerEscenarios managerEscenarios;
 
     [Header("Animacion")]
@@ -24,7 +24,7 @@ public class PetBehaviour : MonoBehaviour
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
-        
+
     }
     private void Start()
     {
@@ -38,6 +38,7 @@ public class PetBehaviour : MonoBehaviour
 
     private void Update()
     {
+        /*
         if(stats.salud <= 60 || stats.alimentacion <=50 || stats.animo <= 50)
         {
             agent.speed = 4;
@@ -45,17 +46,24 @@ public class PetBehaviour : MonoBehaviour
         else if (stats.salud > 60 || stats.alimentacion > 50 || stats.animo > 50)
         {
             agent.speed = 8;
-        }
-        if (Vector3.Distance(transform.position, target) <= 0.1f )
+        }*/
+        if (Vector3.Distance(transform.position, target) <= 0.1f)
         {
-            UpdateIndex();      
+            animator.SetBool("IsWalking", false);
+
+            timer += Time.deltaTime;
+            if (timer >= stoppedTime)
+            {
+                UpdateIndex();
+                timer = 0;
+            }
         }
         else if (dragobj[0].estaArrast == true || dragobj[1].estaArrast == true || dragobj[2].estaArrast == true)
         {
             agent.SetDestination(waypoints[15].position);
-            
+
         }
-        else if(dragobj[0].estaArrast == false || dragobj[1].estaArrast == false || dragobj[2].estaArrast == false)
+        else if (dragobj[0].estaArrast == false || dragobj[1].estaArrast == false || dragobj[2].estaArrast == false)
         {
             UpdateIndex();
         }
@@ -64,8 +72,8 @@ public class PetBehaviour : MonoBehaviour
         {
             animator.SetBool(condicion, true);
         }
-        //else animator.SetBool(condicion, false);
-        
+       // else animator.SetBool(condicion, false);
+
 
         if (stats.salud <= 25)
         {
@@ -84,19 +92,14 @@ public class PetBehaviour : MonoBehaviour
         else alertas[2].SetActive(false);
     }
 
-    
-    
+
     public void UpdateIndex()
     {
-        if (stoppedTime == 0)
-        {
-            stoppedTime = Random.Range(2, 5);
-        }
         //transform.position = target;
-        int actualIndex;  
-        timer += Time.deltaTime;
+        int actualIndex;
+
         actualIndex = waypointIndex;
-        if(timer >= stoppedTime)
+        if (timer >= stoppedTime)
         {
             if (SceneManager.GetActiveScene().name == "Main")
             {
@@ -125,16 +128,17 @@ public class PetBehaviour : MonoBehaviour
                 }
                 while (waypointIndex == actualIndex);
             }
-            
+
             UpdateDestination();
-            timer = 0;
+
         }
     }
     public void UpdateDestination()
     {
         target = waypoints[waypointIndex].position;
         agent.SetDestination(target);
-        stoppedTime = 0;
+        animator.SetBool("IsWalking", true);
+        stoppedTime = Random.Range(4, 8);
     }
-    
+
 }
