@@ -5,13 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class ControllerCanvasUI : MonoBehaviour
 {
-    public GameObject Menu,Settings,Credits,Salir,monedas, ButtonMenu, Info,Tips,Etiquetas,Store;
+    public GameObject Menu, Settings, Credits, Salir, monedas, ButtonMenu, Info, Tips, Etiquetas, Store;
     private float waitTime = 2.0f;
     private float timer = 0.0f;
     public void SettingsOn()
     {
         Menu.SetActive(true);
-        
+
         Time.timeScale = 0f;
         // Debug.Log("pausado");
 
@@ -55,7 +55,7 @@ public class ControllerCanvasUI : MonoBehaviour
     }
     public void OpenPanelSalirGame()
     {
-        Time.timeScale = 0f; 
+        Time.timeScale = 0f;
         Salir.SetActive(true);
         ButtonMenu.SetActive(false);
     }
@@ -100,13 +100,13 @@ public class ControllerCanvasUI : MonoBehaviour
     }
     public void CloseEtiquetas()
     {
-        Time.timeScale = 1f;  
+        Time.timeScale = 1f;
         Etiquetas.SetActive(false);
         ButtonMenu.SetActive(true);
     }
 
     public void OpenTienda()
-    { 
+    {
         Time.timeScale = 0f;
         Store.SetActive(true);
         //ButtonMenu.SetActive(false);
@@ -117,6 +117,7 @@ public class ControllerCanvasUI : MonoBehaviour
         Store.SetActive(false);
         //al ButtonMenu.SetActive(true);
     }
+
 
     public void QuitGame()
     {
@@ -147,4 +148,11 @@ public class ControllerCanvasUI : MonoBehaviour
     {
         SceneManager.LoadScene("Main");
     }
+
+    public void CargarFAQ()
+    {
+        SceneManager.LoadScene("FAQ");
+    }
+
+
 }

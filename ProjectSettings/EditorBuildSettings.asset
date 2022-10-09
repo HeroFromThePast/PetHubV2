@@ -41,4 +41,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/comedero.unity
     guid: 8c296ca8cbed5c945b2f9a758aa08206
+  - enabled: 1
+    path: Assets/Scenes/FAQ.unity
+    guid: 7c351427f1dc4a245b7adf672887c981
   m_configObjects: {}

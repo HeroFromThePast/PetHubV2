@@ -3908,6 +3908,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7435993218524683636, guid: 88802b63c18c5bf40bf2ae2a9256da85, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88802b63c18c5bf40bf2ae2a9256da85, type: 3}
 --- !u!222 &114527315867174616
@@ -5258,7 +5262,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1660671128631885671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25193,7 +25197,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!224 &4446182960643717835
 RectTransform:
@@ -39252,21 +39256,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7967809146378609739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7967809146378609740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c1c3c175f6dfa14faf458950e64d842, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aparecer: {fileID: 11400000, guid: 33163caa456634c4e983a1dca67fa02f, type: 2}
-  desaparecer: {fileID: 11400000, guid: 4f31c16e76a100a4fab5c50e0b296507, type: 2}
-  activo: 0
 --- !u!1 &7967809146378609740
 GameObject:
   m_ObjectHideFlags: 0
@@ -39279,7 +39268,6 @@ GameObject:
   - component: {fileID: 7967809146378609736}
   - component: {fileID: 7967809146378609737}
   - component: {fileID: 7967809146378609742}
-  - component: {fileID: 7967809146378609739}
   m_Layer: 5
   m_Name: 'Comida_btn '
   m_TagString: Untagged
@@ -39330,19 +39318,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7967809146378609737}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7967809146378609739}
-        m_TargetAssemblyTypeName: DispararEventoTip, Assembly-CSharp
-        m_MethodName: ApareceryDesaparecer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!224 &7967809146378609743
 RectTransform:
   m_ObjectHideFlags: 0
@@ -39982,21 +39958,6 @@ RectTransform:
   m_AnchoredPosition: {x: 241.901, y: 525.99994}
   m_SizeDelta: {x: 261.792, y: 75.084}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7967809146761060648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7967809146761060653}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c1c3c175f6dfa14faf458950e64d842, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aparecer: {fileID: 11400000, guid: f66e33c0278723c429219cb30fdf8d49, type: 2}
-  desaparecer: {fileID: 11400000, guid: c0c11d3258d4e7943ad29845d70cb35a, type: 2}
-  activo: 0
 --- !u!222 &7967809146761060649
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -40039,7 +40000,6 @@ GameObject:
   - component: {fileID: 7967809146761060649}
   - component: {fileID: 7967809146761060654}
   - component: {fileID: 7967809146761060655}
-  - component: {fileID: 7967809146761060648}
   m_Layer: 5
   m_Name: Felicidad_btn
   m_TagString: Untagged
@@ -40120,19 +40080,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7967809146761060654}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7967809146761060648}
-        m_TargetAssemblyTypeName: DispararEventoTip, Assembly-CSharp
-        m_MethodName: ApareceryDesaparecer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!222 &7967809146853602529
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -40731,19 +40679,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7967809147060183667}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7967809147060183677}
-        m_TargetAssemblyTypeName: DispararEventoTip, Assembly-CSharp
-        m_MethodName: ApareceryDesaparecer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!224 &7967809147060183665
 RectTransform:
   m_ObjectHideFlags: 0
@@ -40815,7 +40751,6 @@ GameObject:
   - component: {fileID: 7967809147060183666}
   - component: {fileID: 7967809147060183667}
   - component: {fileID: 7967809147060183664}
-  - component: {fileID: 7967809147060183677}
   m_Layer: 5
   m_Name: 'Energia_btn '
   m_TagString: Untagged
@@ -40823,21 +40758,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &7967809147060183677
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7967809147060183670}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c1c3c175f6dfa14faf458950e64d842, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aparecer: {fileID: 11400000, guid: 325132dda7faff8448a8cd577eca0589, type: 2}
-  desaparecer: {fileID: 11400000, guid: 73262e2663dc3a540a189e911e8e4360, type: 2}
-  activo: 0
 --- !u!222 &7967809147066653792
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -49163,7 +49083,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -49193,7 +49113,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8638694093242813692}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4433345966474284869}
+        m_TargetAssemblyTypeName: ControllerCanvasUI, Assembly-CSharp
+        m_MethodName: CargarFAQ
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!224 &8638694093242813694
 RectTransform:
   m_ObjectHideFlags: 0
