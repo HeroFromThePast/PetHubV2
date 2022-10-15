@@ -15,14 +15,15 @@ public class PetBehaviour : MonoBehaviour
     NavMeshAgent agent;
     [SerializeField] public Transform[] waypoints;
     [SerializeField] int waypointIndex;
-    [SerializeField] float stoppedTime = 0;
+    [SerializeField] float stoppedTime = 0, posChangeCount = 0;
     Vector3 target;
     [SerializeField] float timer;
     [SerializeField] ManagerEscenarios managerEscenarios;
+    
 
     [Header("Animacion")]
     [SerializeField] Animator animator;
-    [SerializeField] string condicion;
+    //[SerializeField] string condicion;
     [SerializeField] GameObject[] alertas;
 
     private void Awake()
@@ -42,10 +43,39 @@ public class PetBehaviour : MonoBehaviour
     }
 
     private void Update()
-    { 
+    {
+        if (stats.salud < 50 || stats.alimentacion < 50 || stats.animo < 50)
+        {
+            animator.SetBool("IsHappy", false);
+        }
+        else animator.SetBool("IsHappy", true);
         if (Vector3.Distance(transform.position, target) <= 0.1f)
         {
+            
             animator.SetBool("IsWalking", false);
+
+
+
+            if(posChangeCount == 1)
+            {
+                animator.SetTrigger("Sniff");
+            }
+            if(posChangeCount == 2)
+            {
+                animator.SetTrigger("Scratch");
+
+            }
+            if (posChangeCount == 3)
+            {
+                animator.SetTrigger("Shake");
+              
+            }
+            if (posChangeCount == 4)
+            {
+                animator.SetTrigger("Hear Something");
+                posChangeCount = 0;
+            }
+
 
             timer += Time.deltaTime;
             if (timer >= stoppedTime)
@@ -93,6 +123,7 @@ public class PetBehaviour : MonoBehaviour
     public void UpdateIndex()
     {
         //transform.position = target;
+        
         int actualIndex;
 
         actualIndex = waypointIndex;
@@ -135,6 +166,7 @@ public class PetBehaviour : MonoBehaviour
         target = waypoints[waypointIndex].position;
         agent.SetDestination(target);
         animator.SetBool("IsWalking", true);
+        posChangeCount++;
         stoppedTime = Random.Range(4, 8);
     }
 

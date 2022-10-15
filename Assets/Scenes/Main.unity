@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1312,7 +1312,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1165986097}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.38
+  m_Radius: 0.7
   m_Speed: 1
   m_Acceleration: 8
   avoidancePriority: 50
@@ -1419,10 +1419,10 @@ MonoBehaviour:
   - {fileID: 7335852343534208294}
   waypointIndex: 0
   stoppedTime: 0
+  posChangeCount: 0
   timer: 0
   managerEscenarios: {fileID: 1267181869}
   animator: {fileID: 1165986099}
-  condicion: EstaArrastr
   alertas:
   - {fileID: 1789075889}
   - {fileID: 1822812565}
@@ -4122,7 +4122,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7435993218312253578, guid: 88802b63c18c5bf40bf2ae2a9256da85, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7435993218524683636, guid: 88802b63c18c5bf40bf2ae2a9256da85, type: 3}
       propertyPath: m_SortingOrder
