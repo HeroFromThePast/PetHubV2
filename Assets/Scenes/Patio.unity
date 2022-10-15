@@ -1485,10 +1485,10 @@ MonoBehaviour:
   - {fileID: 7335852343534208294}
   waypointIndex: 0
   stoppedTime: 0
+  posChangeCount: 0
   timer: 0
   managerEscenarios: {fileID: 1267181869}
   animator: {fileID: 1343520126}
-  condicion: EstaArrastr
   alertas:
   - {fileID: 2012018209}
   - {fileID: 1529843496}
@@ -3868,7 +3868,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7435993218312253578, guid: 88802b63c18c5bf40bf2ae2a9256da85, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7435993218524683636, guid: 88802b63c18c5bf40bf2ae2a9256da85, type: 3}
       propertyPath: m_SortingOrder
