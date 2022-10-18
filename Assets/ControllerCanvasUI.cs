@@ -5,15 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class ControllerCanvasUI : MonoBehaviour
 {
-    public GameObject Menu, Settings, Credits, Salir, monedas, ButtonMenu, Info, Tips, Etiquetas, Store;
+    public GameObject Menu, Settings, Credits, Salir, monedas, ButtonMenu, Info, Tips, Etiquetas, Store,CloseMenu;
     private float waitTime = 2.0f;
     private float timer = 0.0f;
+    public bool abierto;
     public void SettingsOn()
     {
+        abierto = true;
         Menu.SetActive(true);
-
+        CloseMenu.SetActive(true);
         Time.timeScale = 0f;
-        // Debug.Log("pausado");
+        ButtonMenu.SetActive(false);
+     
 
     }
     public void Ajustes()
@@ -111,11 +114,13 @@ public class ControllerCanvasUI : MonoBehaviour
         Store.SetActive(true);
         //ButtonMenu.SetActive(false);
     }
-    public void CloseTienda()
+    public void CloseMenus()
     {
-        Time.timeScale = 1f;
-        Store.SetActive(false);
-        //al ButtonMenu.SetActive(true);
+      
+        Menu.SetActive(false);
+        ButtonMenu.SetActive(true);
+        CloseMenu.SetActive(false);
+        
     }
 
 
