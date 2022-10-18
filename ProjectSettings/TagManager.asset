@@ -10,6 +10,7 @@ TagManager:
   - MensajePlanner
   - TextoTarea
   - InputField
+  - Cama
   layers:
   - Default
   - TransparentFX

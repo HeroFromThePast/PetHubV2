@@ -945,7 +945,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1315299678}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
@@ -1414,6 +1415,77 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4b5049db98025c4f8efd417f069d2ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1273569455 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -6651803160551237383, guid: 04d731ca482b7c74980c1bb0ee84c602, type: 3}
+  m_PrefabInstance: {fileID: 974748876}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1273569459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273569455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0c1a15bb2cb7d34fadeff0222f8c5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stats: {fileID: 1343520121}
+  actualizar: {fileID: 0}
+  petBehaviour: {fileID: 1343520122}
+  cama: {fileID: 0}
+  sleepTime: 0
+--- !u!1 &1315299676
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1315299678}
+  - component: {fileID: 1315299677}
+  m_Layer: 0
+  m_Name: no borrar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1315299677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315299676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0c1a15bb2cb7d34fadeff0222f8c5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stats: {fileID: 1343520121}
+  actualizar: {fileID: 11400000, guid: 0ecad5114bf09224e973e0a54d2f17bf, type: 2}
+  petBehaviour: {fileID: 1343520122}
+  cama: {fileID: 1315299678}
+  sleepTime: 0
+--- !u!4 &1315299678
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315299676}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -11.8, z: 57.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 579818141}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1343520120 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7487566405258567421, guid: 42f001d1e074c3541bf7d819745626d2, type: 3}
@@ -1461,11 +1533,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nombre: {fileID: 6717718984226677229}
+  dogSleep: {fileID: 1315299677}
   stats: {fileID: 1343520121}
   dragobj:
   - {fileID: 460184183}
   - {fileID: 1662753183}
   - {fileID: 163544183}
+  actualizar: {fileID: 11400000, guid: 0ecad5114bf09224e973e0a54d2f17bf, type: 2}
   waypoints:
   - {fileID: 932786652}
   - {fileID: 294858106}
@@ -1489,10 +1563,6 @@ MonoBehaviour:
   timer: 0
   managerEscenarios: {fileID: 1267181869}
   animator: {fileID: 1343520126}
-  alertas:
-  - {fileID: 2012018209}
-  - {fileID: 1529843496}
-  - {fileID: 917009309}
 --- !u!114 &1343520123
 MonoBehaviour:
   m_ObjectHideFlags: 0
