@@ -1,17 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+
 public class PetBehaviour : MonoBehaviour
 {
     [SerializeField] TMP_Text nombre;
-
+    [SerializeField] DogSleep dogSleep;
     [SerializeField] Estadisticas stats;
     [SerializeField] DragObjects[] dragobj;
-    //[SerializeField] Eventos propEntregado;
+    [SerializeField] Eventos actualizar;
+     //[SerializeField] Eventos propEntregado;
     NavMeshAgent agent;
     [SerializeField] public Transform[] waypoints;
     [SerializeField] int waypointIndex;
@@ -24,7 +28,6 @@ public class PetBehaviour : MonoBehaviour
     [Header("Animacion")]
     [SerializeField] Animator animator;
     //[SerializeField] string condicion;
-    [SerializeField] GameObject[] alertas;
 
     private void Awake()
     {
@@ -44,12 +47,17 @@ public class PetBehaviour : MonoBehaviour
 
     private void Update()
     {
+        if(dogSleep.sleepTime == true)
+        {
+            target = waypoints[8].position;
+        }
         if (stats.salud < 50 || stats.alimentacion < 50 || stats.animo < 50)
         {
             animator.SetBool("IsHappy", false);
         }
         else animator.SetBool("IsHappy", true);
-        if (Vector3.Distance(transform.position, target) <= 0.1f)
+
+        if (Vector3.Distance(transform.position, target) <= 0.1f && dogSleep.sleepTime == false)
         {
             
             animator.SetBool("IsWalking", false);
@@ -84,16 +92,37 @@ public class PetBehaviour : MonoBehaviour
                 timer = 0;
             }
         }
+        else if (Vector3.Distance(transform.position, target) <= 0.1f && dogSleep.sleepTime == true)
+        {
+         
+            posChangeCount = 0;
+    
+            animator.SetBool("IsSleeping", true);
+            animator.SetBool("IsWalking", false);
+
+            stats.animo += Time.deltaTime * 2;
+            actualizar.FireEvent();
+            if (stats.animo >= 100)
+            {
+                stats.animo = 100.0f;
+                dogSleep.sleepTime = false;
+                animator.SetBool("IsSleeping", false);
+                UpdateIndex();
+            }
+
+        }
         else if (dragobj[0].estaArrast == true || dragobj[1].estaArrast == true || dragobj[2].estaArrast == true)
         {
             target = waypoints[15].position;
             agent.SetDestination(target);
 
         }
-        else if (dragobj[0].estaArrast == false || dragobj[1].estaArrast == false || dragobj[2].estaArrast == false)
+        else if (dragobj[0].estaArrast == false || dragobj[1].estaArrast == false || dragobj[2].estaArrast == false && dogSleep.sleepTime == false)
         {
             UpdateIndex();
         }
+
+        
         /*
         if (dragobj[0].estaArrast == true || dragobj[1].estaArrast == true || dragobj[2].estaArrast == true)
         {
@@ -102,21 +131,7 @@ public class PetBehaviour : MonoBehaviour
        // else animator.SetBool(condicion, false);*/
 
 
-        if (stats.salud <= 25)
-        {
-            alertas[0].SetActive(true);
-        }
-        else alertas[0].SetActive(false);
-        if (stats.alimentacion <= 25)
-        {
-            alertas[1].SetActive(true);
-        }
-        else alertas[1].SetActive(false);
-        if (stats.animo <= 25)
-        {
-            alertas[2].SetActive(true);
-        }
-        else alertas[2].SetActive(false);
+
     }
 
 
@@ -156,13 +171,37 @@ public class PetBehaviour : MonoBehaviour
                 }
                 while (waypointIndex == actualIndex);
             }
+            
 
-            UpdateDestination();
 
+                UpdateDestination();
+
+        }
+        else if (dogSleep.sleepTime == true)
+        {
+            waypointIndex = 8;
+            if (animator.GetBool("IsWalking") == true)
+            {
+                UpdateDestination();
+            }
+            else
+            {
+                timer += Time.deltaTime;
+                if (timer >= stoppedTime)
+                {
+                    UpdateDestination();
+                    timer = 0;
+                }
+            }
+            
+
+            
+           
         }
     }
     public void UpdateDestination()
     {
+        
         target = waypoints[waypointIndex].position;
         agent.SetDestination(target);
         animator.SetBool("IsWalking", true);
