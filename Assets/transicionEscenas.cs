@@ -23,6 +23,7 @@ public class transicionEscenas : MonoBehaviour
         animator.SetTrigger("Iniciar");
         yield return new WaitForSeconds(animacionFinal.length);
         SceneManager.LoadScene("Patio");
+        Time.timeScale = 1f;
     }
 
     public void Main()
@@ -35,6 +36,7 @@ public class transicionEscenas : MonoBehaviour
         animator.SetTrigger("Iniciar");
         yield return new WaitForSeconds(animacionFinal.length);
         SceneManager.LoadScene("Main");
+        Time.timeScale = 1f;
     }
     public void Sala()
     {
@@ -46,5 +48,32 @@ public class transicionEscenas : MonoBehaviour
         animator.SetTrigger("Iniciar");
         yield return new WaitForSeconds(animacionFinal.length);
         SceneManager.LoadScene("Sala");
+        Time.timeScale = 1f;
+    }
+
+    public void FAQ_Camb()
+    {
+        StartCoroutine(FAQ_Change());
+    }
+
+    IEnumerator FAQ_Change()
+    {
+        animator.SetTrigger("Iniciar");
+        yield return new WaitForSeconds(animacionFinal.length);
+        SceneManager.LoadScene("FAQ");
+        Time.timeScale = 1f;
+    }
+
+    public void Agenda_Camb()
+    {
+        StartCoroutine(Agenda_Change());
+    }
+
+    IEnumerator Agenda_Change()
+    {
+        animator.SetTrigger("Iniciar");
+        yield return new WaitForSeconds(animacionFinal.length);
+        SceneManager.LoadScene("Agenda");
+        Time.timeScale = 1f;
     }
 }

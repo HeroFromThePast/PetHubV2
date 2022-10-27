@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class ControllerBotonesAgenda : MonoBehaviour
 {
 
-    [SerializeField] public GameObject panelNewTare, panelMidia, panelCalendario,recuadroMiDia,recuadroCalendario,AgregarNoti,
+    [SerializeField] public GameObject panelNewTare,panelborrar, panelMidia, panelCalendario,recuadroMiDia,recuadroCalendario,AgregarNoti,
         enero,febrero,marzo,abril, mayo, junio, julio, agosto, septiembre, octubre, nov, dicksiembre;
 
 
@@ -35,6 +35,15 @@ public class ControllerBotonesAgenda : MonoBehaviour
     public void CloseDiaA_Dia()
     {    
         AgregarNoti.SetActive(false);
+    }
+    public void OpenBorrar()
+    {
+        panelborrar.SetActive(true);
+    }
+
+    public void CloseBorrar()
+    {
+        panelborrar.SetActive(false);
     }
 
     public void OpenEnero()

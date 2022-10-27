@@ -14,7 +14,7 @@ public class ControllerCanvasUI : MonoBehaviour
         abierto = true;
         Menu.SetActive(true);
         CloseMenu.SetActive(true);
-        Time.timeScale = 0f;
+        Time.timeScale = 1f;
         ButtonMenu.SetActive(false);
      
 
@@ -23,11 +23,13 @@ public class ControllerCanvasUI : MonoBehaviour
     {
         Menu.SetActive(false);
         Settings.SetActive(true);
+        Time.timeScale = 0f;
     }
     public void CloseAjustes()
     {
         Time.timeScale = 1f;
         Settings.SetActive(false);
+        Time.timeScale = 1f;
     }
     public void FAQ()
     {
@@ -39,6 +41,7 @@ public class ControllerCanvasUI : MonoBehaviour
         ButtonMenu.SetActive(false);
         Menu.SetActive(false);
         Credits.SetActive(true);
+        Time.timeScale = 0f;
     }
     public void CloseCreditos()
     {
@@ -120,7 +123,8 @@ public class ControllerCanvasUI : MonoBehaviour
         Menu.SetActive(false);
         ButtonMenu.SetActive(true);
         CloseMenu.SetActive(false);
-        
+        Time.timeScale = 1f;
+
     }
 
 

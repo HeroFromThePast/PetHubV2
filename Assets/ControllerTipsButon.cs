@@ -9,7 +9,7 @@ public class ControllerTipsButon : MonoBehaviour
     [SerializeField] float duracionTip, aparicionTip;
     [SerializeField] Vector2 posicionNueva, posicionInicial;
     [SerializeField] GameObject PanelTipComida,PanelSalud,PanelEnergia,PanelComportamiento,Dogo1,Dogo2, Dogo3, DogoS1, DogoS2, DogoS3, DogoE1, DogoE2, DogoE3,
-        DogoC1, DogoC2, DogoC3;
+        DogoC1, DogoC2, DogoC3,MainBack;
 
     void Start()
     {
@@ -21,12 +21,14 @@ public class ControllerTipsButon : MonoBehaviour
     {
         Time.timeScale = 0f;
         PanelTipComida.SetActive(true);
+        MainBack.SetActive(false);
         //ButtonMenu.SetActive(false);
     }
     public void CloseFAQTip()
     {
-        Time.timeScale = 0f;
+        Time.timeScale = 1f;
         PanelTipComida.SetActive(false);
+        MainBack.SetActive(true);
         //ButtonMenu.SetActive(false);
     }
 
@@ -34,12 +36,14 @@ public class ControllerTipsButon : MonoBehaviour
     {
         Time.timeScale = 0f;
         PanelSalud.SetActive(true);
+        MainBack.SetActive(false);
         //ButtonMenu.SetActive(false);
     }
     public void CloseFAQTipSalud()
     {
-        Time.timeScale = 0f;
+        Time.timeScale = 1f;
         PanelSalud.SetActive(false);
+        MainBack.SetActive(true);
         //ButtonMenu.SetActive(false);
     }
 
@@ -47,12 +51,14 @@ public class ControllerTipsButon : MonoBehaviour
     {
         Time.timeScale = 0f;
         PanelEnergia.SetActive(true);
+        MainBack.SetActive(false);
         //ButtonMenu.SetActive(false);
     }
     public void CloseFAQTipEnergia()
     {
-        Time.timeScale = 0f;
+        Time.timeScale = 1f;
         PanelEnergia.SetActive(false);
+        MainBack.SetActive(true);
         //ButtonMenu.SetActive(false);
     }
 
@@ -60,12 +66,14 @@ public class ControllerTipsButon : MonoBehaviour
     {
         Time.timeScale = 0f;
         PanelComportamiento.SetActive(true);
+        MainBack.SetActive(false);
         //ButtonMenu.SetActive(false);
     }
     public void CloseFAQTipComportamiento()
     {
-        Time.timeScale = 0f;
+        Time.timeScale = 1f;
         PanelComportamiento.SetActive(false);
+        MainBack.SetActive(true);
         //ButtonMenu.SetActive(false);
     }
 
