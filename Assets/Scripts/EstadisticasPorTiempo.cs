@@ -11,7 +11,7 @@ public class EstadisticasPorTiempo : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        if (timer >= 60)
+        if (timer >= 30)
         {
             stats.disminucionA = 2;
             stats.disminucionAl = 2;

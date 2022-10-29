@@ -104,7 +104,7 @@ public class PetBehaviour : MonoBehaviour
             actualizar.FireEvent();
             if (stats.animo >= 100)
             {
-                stats.animo = 100.0f;
+                stats.animo = 100f;
                 dogSleep.sleepTime = false;
                 animator.SetBool("IsSleeping", false);
                 UpdateIndex();
@@ -201,7 +201,6 @@ public class PetBehaviour : MonoBehaviour
     }
     public void UpdateDestination()
     {
-        
         target = waypoints[waypointIndex].position;
         agent.SetDestination(target);
         animator.SetBool("IsWalking", true);
