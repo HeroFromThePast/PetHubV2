@@ -65,7 +65,7 @@ public class DragObjects : MonoBehaviour
             actualizar.Actualizar();
             soundManager.Masticar();
             holderTip.SetActive(true);
-            textoTip.text = "A tu perro le gusta y le hace bien el cuido, que se repita";
+            textoTip.text = "A tu perro le gusta y le hace bien el concentrado, que se repita";
         }
         estaArrast = false;
         this.gameObject.transform.position = posIni;

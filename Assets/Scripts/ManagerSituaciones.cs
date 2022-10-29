@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ManagerSituaciones : MonoBehaviour
 {
     [SerializeField] SituacionesYCambios[] situaciones;
     [SerializeField] Eventos recibirPedigree, recibirPollo, recibirChocolate,alterarStats,actualizarStats;
     [SerializeField] Estadisticas mascota;
+    [SerializeField] GameObject canvasTips;
     void Start()
     {
         recibirPedigree.GEvent += Pedigree;
@@ -38,5 +40,10 @@ public class ManagerSituaciones : MonoBehaviour
         recibirPedigree.GEvent -= Pedigree;
         recibirPollo.GEvent -= Pollo;
         recibirChocolate.GEvent -= Chocolate;
+    }
+
+    public void closeTab()
+    {
+        canvasTips.SetActive(false);
     }
 }
