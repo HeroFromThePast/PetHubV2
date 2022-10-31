@@ -7,7 +7,10 @@ public class EstadisticasPorTiempo : MonoBehaviour
     private float timer;
     [SerializeField] ActualizarStats actualizar;
     [SerializeField] Estadisticas stats;
-
+    private void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
     void Update()
     {
         timer += Time.deltaTime;

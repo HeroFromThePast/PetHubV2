@@ -7,6 +7,7 @@ public class CargarGuardado : MonoBehaviour
 {
 
     [SerializeField] Estadisticas stats;
+    [SerializeField] ActualizarStats actualizar;
     void Awake()
     {
         CargarPerro();
@@ -19,15 +20,24 @@ public class CargarGuardado : MonoBehaviour
 
     void GuardarPerro()
     {
-        GuardarDatos.GuardarPerro(stats);
+        //GuardarDatos.GuardarPerro(stats);
+        PlayerPrefs.SetFloat("Salud", stats.salud);
+        PlayerPrefs.SetFloat("Alimentacion", stats.alimentacion);
+        PlayerPrefs.SetFloat("Animo", stats.animo);
     }
 
     void CargarPerro()
     {
-        DatosPerro dPerro = GuardarDatos.CargarDatos();
+        stats.salud = PlayerPrefs.GetFloat("Salud");
+        stats.alimentacion = PlayerPrefs.GetFloat("Alimentacion");
+        stats.animo = PlayerPrefs.GetFloat("Animo");
+        actualizar.Actualizar();
+        /*
+            DatosPerro dPerro = GuardarDatos.CargarDatos();
 
-        stats.salud = dPerro.salud;
-        stats.alimentacion = dPerro.alimentacion;
-        stats.animo = dPerro.animo;
+            stats.salud = dPerro.salud;
+            stats.alimentacion = dPerro.alimentacion;
+            stats.animo = dPerro.animo;
+        */
     }
 }
