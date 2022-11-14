@@ -12,6 +12,14 @@ public class PantallasContrato : MonoBehaviour
     [SerializeField] TMP_InputField nombre;
     string nombrePerro;
 
+    private void Awake()
+    {
+        if (PlayerPrefs.GetInt("Completado") == 1)
+        {
+            SceneManager.LoadScene("Main");
+        }
+    }
+
     void Start()
     {
         contrato.GEvent += Contrato;
@@ -37,6 +45,7 @@ public class PantallasContrato : MonoBehaviour
 
     public void onAcceptContract()
     {
+        PlayerPrefs.SetInt("Completado", 1);
         SceneManager.LoadScene("Main");
     }
     private void OnDestroy()
