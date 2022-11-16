@@ -15,12 +15,13 @@ public class Planner : MonoBehaviour
     [SerializeField] TextMeshProUGUI texto1;
     [SerializeField] TextMeshProUGUI textoTarea;
     
-    [SerializeField] TextMeshProUGUI textoNombre;
+    [SerializeField] TextMeshProUGUI textoNombre,textoPerfil;
 
 
     private void Start()
     {
         textoNombre.text = PlayerPrefs.GetString("NombrePerro");
+        textoPerfil.text = PlayerPrefs.GetString("NombrePerro");
     }
     void Update()
     {

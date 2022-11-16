@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class ControllerCanvasUI : MonoBehaviour
 {
-    public GameObject Menu, Settings, Credits, Salir, monedas, ButtonMenu, Info, Tips, Etiquetas, Store,CloseMenu;
+    public GameObject Menu, Settings, Credits, Salir, monedas, ButtonMenu, Info, Tips, Etiquetas, Etiquetas2, Etiquetas3, Store,CloseMenu;
     private float waitTime = 2.0f;
     private float timer = 0.0f;
     public bool abierto;
@@ -97,17 +97,43 @@ public class ControllerCanvasUI : MonoBehaviour
         Info.SetActive(false);
         ButtonMenu.SetActive(true);
     }
-    public void OpenEtiquetas()
+    public void OpenEtiquetas1()
     {
         Time.timeScale = 0f;
         Info.SetActive(false);
         Etiquetas.SetActive(true);
         ButtonMenu.SetActive(false);
     }
-    public void CloseEtiquetas()
+    public void CloseEtiquetas1()
     {
         Time.timeScale = 1f;
         Etiquetas.SetActive(false);
+        ButtonMenu.SetActive(true);
+    }
+    public void OpenEtiquetas2()
+    {
+        Time.timeScale = 0f;
+        Info.SetActive(false);
+        Etiquetas2.SetActive(true);
+        ButtonMenu.SetActive(false);
+    }
+    public void CloseEtiquetas2()
+    {
+        Time.timeScale = 1f;
+        Etiquetas2.SetActive(false);
+        ButtonMenu.SetActive(true);
+    }
+    public void OpenEtiquetas3()
+    {
+        Time.timeScale = 0f;
+        Info.SetActive(false);
+        Etiquetas3.SetActive(true);
+        ButtonMenu.SetActive(false);
+    }
+    public void CloseEtiquetas3()
+    {
+        Time.timeScale = 1f;
+        Etiquetas3.SetActive(false);
         ButtonMenu.SetActive(true);
     }
 
